@@ -1,0 +1,22 @@
+
+header {
+    /* height: 100px; */
+    background-color: #424242;;
+}
+
+.content-carousel{
+    color: white;
+    height: 200px;
+    position: relative;
+}
+.content-carousel img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+[alt="carousel-main-img"]{
+   
+    filter: brightness(50%);
+}
