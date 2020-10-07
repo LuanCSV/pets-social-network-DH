@@ -1,4 +1,7 @@
-
+body{
+    /* color: white; */
+    background-color: #bcdcff44;
+}
 header {
     background-color: #424242;;
     color: white;
@@ -14,11 +17,4 @@ header {
     .content-carousel {
         height: 100vh;
     }
-}
-
-
-
-.content-carousel div {
-    width: 100%;
-    text-align: center;
 }
