@@ -1,22 +1,24 @@
 
 header {
-    /* height: 100px; */
     background-color: #424242;;
-}
-
-.content-carousel{
     color: white;
-    height: 200px;
-    position: relative;
-}
-.content-carousel img{
-    width: 100%;
-    position: absolute;
-    top: 0;
-    z-index: -1;
 }
 
-[alt="carousel-main-img"]{
-   
-    filter: brightness(50%);
+[class="carousel-control-prev"]:hover{
+    background-image: linear-gradient(to right,#000000ab, #00000000);
+}
+[class="carousel-control-next"]:hover{
+    background-image: linear-gradient(to left,#000000ab, #00000000);
+}
+@media(min-width:1200px){
+    .content-carousel {
+        height: 100vh;
+    }
+}
+
+
+
+.content-carousel div {
+    width: 100%;
+    text-align: center;
 }
