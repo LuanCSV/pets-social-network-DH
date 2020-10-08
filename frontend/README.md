@@ -1,3 +1,3 @@
-Crie sua pasta com seu nome e os arquivos index html dentro dela. 
+# Front End
 
-Depois a gente junta as ideias em um arquivo só. Apenas pra esse inicio de estruturação.
+Essa pasta vai ser utilizada para guardar os arquivos relacionados ao front end
