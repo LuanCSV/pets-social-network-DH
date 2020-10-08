@@ -11,7 +11,10 @@ body {
 
 
 header {
+    width: 100%;
     min-height: 100px;
+    background-image: linear-gradient(to right, rgb(13, 13, 102), rgb(176, 176, 255));
+    color: white;
 }
 
 main {
@@ -21,42 +24,70 @@ main {
 
 @media only screen and (max-width: 1024px) {
     main {
-        min-height: 80vh;
+        min-height: 79vh;
     }
 
-    footer {
-        padding: 0px;
+    #cad-index {
+        margin-left: 30px;
+        offset: 20px;
     }
+}
+
+img {
+    border-radius: 10px;
 }
 
 form {
     margin-top: 5px;
 }
 
-.intro-petbook {
-    background-image: linear-gradient(to right, rgb(13, 13, 102), rgb(176, 176, 255));
-    padding: 1px;
-    color: white;
+input{
+    border-radius: 50px !important;
+}
 
+small{
+    font-style: italic;
+}
+
+.btn {
+    margin-bottom: 15px;
+    background-color: rgb(29, 29, 94);
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 50px;
+}
+
+.btn:focus {
+    margin-bottom: 15px ;
+    background-image: linear-gradient(to bottom, rgb(13, 13, 102), rgb(118, 118, 226)) ;
+    color: white ;
+    font-weight: bolder ;
+    box-shadow: none ;
+    font-size: 17px ;
 }
 
 footer {
     min-height: 70px;
-    padding-top: 50px;
+    padding-top: 25px;
     position: absolute;
-    width: 100%;
+    padding-bottom:10px;
 }
 
 i {
     padding: 0;
     margin: 0;
+    font-style: normal;
     list-style: none;
     cursor: pointer;
     color: rgb(13, 13, 102);
 }
-
+i:hover{
+    font-weight: bolder;
+}
 
 select {
+    font-style: normal !important;
     cursor: pointer;
     border: 0 none;
     outline: 0;
@@ -67,28 +98,51 @@ select {
     font-style: italic;
     color: rgb(13, 13, 102);
 }
-
-.btn {
-    margin-bottom: 15px;
-    background-color: rgb(29, 29, 94);
-    color: white;
-    font-weight: bolder;
-    border: none;
+select:hover{
+font-weight: bolder;
 }
 
-.btn:hover {
-    margin-bottom: 15px;
-    background-color: rgb(29, 29, 94);
-    color: white;
+.cpr{
+    margin-top: 5px;
+    font-size: 12px;
     font-weight: bolder;
-    border: none;
+    font-style: normal !important;
 }
 
-.btn:focus {
-    margin-bottom: 15px !important;
-    background-image: linear-gradient(to bottom, rgb(13, 13, 102), rgb(118, 118, 226)) !important;
-    color: white !important;
-    font-weight: bolder !important;
-    box-shadow: none !important;
-    font-size: 17px !important;
+.cp{
+    font-style: normal;
+}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 1024px) {
+    p{
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    p{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    p{
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    p{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 479px) {
+    p{
+        font-size: 16px;
+    }
 }

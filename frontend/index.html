@@ -13,13 +13,13 @@
 
 <body class="">
 
-  <header class="intro-petbook">
+  <header class="intro-petbook px-3">
     <h1>PetBook</h1>
-    <h5>Uma Rede Social para seu Pet</h5>
+    <p>Uma Rede Social para seu Pet</p>
   </header>
 
   <main class="container-fluid">
-
+    <!-- Inicio Modal -->
     <div class="modal fade" id="modalLoginTrue" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    
+    <!-- Meio Modal -->
     <div class="modal fade" id="modalLoginFalse" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -55,11 +55,13 @@
         </div>
       </div>
     </div>
-    
-    
+    <!-- Fim Modal -->
+
     <section class="index row">
 
-      <div id="img-index" class="col-sm-8 float-left p-0">
+      <!--Inicio Carrosel Fotos -->
+
+      <div id="img-index" class="col-sm-6 ml-3 mr-3 mt-3 p-0 float-left">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -90,13 +92,16 @@
           </div>
         </div>
       </div>
+      <!--Fim Carrosel Fotos -->
 
-      <div id="cad-index" class="col-sm-4 p-0 float-right">
+      <!--Inicio Tela Login -->
+
+      <div id="cad-index" class="col-sm-5 ml-3 mr-3 mt-3 p-0 float-right">
         <form class="col">
           <div class="form-group">
             <label for="E-mail de cadastro">Email</label>
             <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="">
-            <small id="exemplo-email" class="form-text text-muted">Exemplo:cachorro@email.com</small>
+            <small id="exemplo-email" class="form-text text-muted">Exemplo: cachorro@email.com</small>
           </div>
           <div class="form-group">
             <label for="Senha de acesso">Senha</label>
@@ -105,7 +110,7 @@
           <div class="form-group text-center">
             <a href="">Esqueceu sua senha?</a>
           </div>
-          <button type="submit" class="btn btn-outline-primary  btn-block" id="btnLogin">Entrar</button>
+          <button type="submit" class="btn btn-block" id="btnLogin">Entrar</button>
           <div class="form-group text-center">
             <a href="">Ainda não tem conta?</a>
           </div>
@@ -116,101 +121,103 @@
     </section>
 
   </main>
+  <!--final Tela Login -->
 
   <!-- Footer -->
-  <footer class="">
-
+  <footer class="container-fluid">
     <!-- Footer Elements -->
-    <div class="container">
+    <!-- Grid row-->
+    <div class="row text-center">
+      <div class="col-12">
 
-      <!-- Grid row-->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-12">
-          <div class="mb-5 flex-left">
-            <!--Copyright-->
-            <a class="">
-              <i class="mr-md-5 mr-3">© 2020 PetBook</i>
-            </a>
-            <!-- Sobre -->
-            <a class="">
-              <i class=" mr-md-5 mr-3">Sobre</i>
-            </a>
-            <!-- Privacidade -->
-            <a class="">
-              <i class="mr-md-5 mr-3">Ajuda</i>
-            </a>
-            <!-- Termos-->
-            <a class="">
-              <i class="mr-md-5 mr-3">Termos</i>
-            </a>
-            <!--Localizações -->
-            <a class="">
-              <i class="mr-md-5 mr-3">Localizações</i>
-            </a>
-            <!--Idiomas-->
-            <a class="">
-              <select aria-label="Trocar idioma de exibição" class="">
-                <option disabled selected value="">Idioma</option>
-                <option value="af">Afrikaans</option>
-                <option value="cs">Čeština</option>
-                <option value="da">Dansk</option>
-                <option value="de">Deutsch</option>
-                <option value="el">Ελληνικά</option>
-                <option value="en">English</option>
-                <option value="es">Español (España)</option>
-                <option value="es-la">Español</option>
-                <option value="fi">Suomi</option>
-                <option value="fr">Français</option>
-                <option value="id">Bahasa Indonesia</option>
-                <option value="it">Italiano</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-                <option value="ms">Bahasa Melayu</option>
-                <option value="nb">Norsk</option>
-                <option value="nl">Nederlands</option>
-                <option value="pl">Polski</option>
-                <option value="pt-br">Português (Brasil)</option>
-                <option value="pt">Português (Portugal)</option>
-                <option value="ru">Русский</option>
-                <option value="sv">Svenska</option>
-                <option value="th">ภาษาไทย</option>
-                <option value="tl">Filipino</option>
-                <option value="tr">Türkçe</option>
-                <option value="zh-cn">中文(简体)</option>
-                <option value="zh-tw">中文(台灣)</option>
-                <option value="bn">বাংলা</option>
-                <option value="gu">ગુજરાતી</option>
-                <option value="hi">हिन्दी</option>
-                <option value="hr">Hrvatski</option>
-                <option value="hu">Magyar</option>
-                <option value="kn">ಕನ್ನಡ</option>
-                <option value="ml">മലയാളം</option>
-                <option value="mr">मराठी</option>
-                <option value="ne">नेपाली</option>
-                <option value="pa">ਪੰਜਾਬੀ</option>
-                <option value="si">සිංහල</option>
-                <option value="sk">Slovenčina</option>
-                <option value="ta">தமிழ்</option>
-                <option value="te">తెలుగు</option>
-                <option value="vi">Tiếng Việt</option>
-                <option value="zh-hk">中文(香港)</option>
-                <option value="bg">Български</option>
-                <option value="fr-ca">Français (Canada)</option>
-                <option value="ro">Română</option>
-                <option value="sr">Српски</option>
-                <option value="uk">Українська</option>
-              </select>
-            </a>
-          </div>
-        </div>
-        <!-- Grid column -->
-
+        <!-- Sobre -->
+        <a class="ml-4 col-2">
+          <i class="">Sobre</i>
+        </a>
+        <!-- Privacidade -->
+        <a class="ml-4 col-2">
+          <i class="">Ajuda</i>
+        </a>
+        <!-- Termos-->
+        <a class="ml-4 col-2">
+          <i class="">Termos</i>
+        </a>
+        <!--Localizações -->
+        <a class="ml-4 col-2">
+          <i class="">Localizações</i>
+        </a>
+         <!--Contato -->
+         <a class="ml-4 col-2">
+          <i class="">Contato</i>
+        </a>
+        <!--Idiomas-->
+        <a class="ml-4 col-2">
+          <select aria-label="Trocar idioma de exibição" class="">
+            <option disabled selected value="">Idioma</option>
+            <option value="af">Afrikaans</option>
+            <option value="cs">Čeština</option>
+            <option value="da">Dansk</option>
+            <option value="de">Deutsch</option>
+            <option value="el">Ελληνικά</option>
+            <option value="en">English</option>
+            <option value="es">Español (España)</option>
+            <option value="es-la">Español</option>
+            <option value="fi">Suomi</option>
+            <option value="fr">Français</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="it">Italiano</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+            <option value="ms">Bahasa Melayu</option>
+            <option value="nb">Norsk</option>
+            <option value="nl">Nederlands</option>
+            <option value="pl">Polski</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="pt">Português (Portugal)</option>
+            <option value="ru">Русский</option>
+            <option value="sv">Svenska</option>
+            <option value="th">ภาษาไทย</option>
+            <option value="tl">Filipino</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh-cn">中文(简体)</option>
+            <option value="zh-tw">中文(台灣)</option>
+            <option value="bn">বাংলা</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="hi">हिन्दी</option>
+            <option value="hr">Hrvatski</option>
+            <option value="hu">Magyar</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ml">മലയാളം</option>
+            <option value="mr">मराठी</option>
+            <option value="ne">नेपाली</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+            <option value="si">සිංහල</option>
+            <option value="sk">Slovenčina</option>
+            <option value="ta">தமிழ்</option>
+            <option value="te">తెలుగు</option>
+            <option value="vi">Tiếng Việt</option>
+            <option value="zh-hk">中文(香港)</option>
+            <option value="bg">Български</option>
+            <option value="fr-ca">Français (Canada)</option>
+            <option value="ro">Română</option>
+            <option value="sr">Српски</option>
+            <option value="uk">Українська</option>
+          </select>
+        </a>
+      
       </div>
-      <!-- Grid row-->
-
+      <!-- Grid column -->
     </div>
+    <!-- Grid row-->
+    <div class="cpr row text-center">
+      <div class="col-12">
+        <!--Copyright-->
+        <a class="">
+          <small class="cp ml-3 col-2">© 2020 PetBook</small>
+        </a>
+      </div>
+    </div>
+
     <!-- Footer Elements -->
 
   </footer>
