@@ -4,32 +4,47 @@
     position: 0px;
 }
 
-body{
+body {
     min-height: 100vh;
+    background-size: 100%;
 }
 
-header{
+
+header {
     min-height: 100px;
 }
+
 main {
     min-height: calc(100vh -170px);
-    background-image: linear-gradient(to top,white,rgb(221, 221, 221));
+    background-image: linear-gradient(to top, white, rgb(221, 221, 221));
 }
 
-form{
+@media only screen and (max-width: 1024px) {
+    main {
+        min-height: 80vh;
+    }
+
+    footer {
+        padding: 0px;
+    }
+}
+
+form {
     margin-top: 5px;
 }
-.intro-petbook{
-    background-image: linear-gradient(to right,rgb(13, 13, 102), rgb(176, 176, 255));
+
+.intro-petbook {
+    background-image: linear-gradient(to right, rgb(13, 13, 102), rgb(176, 176, 255));
     padding: 1px;
     color: white;
-    
+
 }
 
 footer {
     min-height: 70px;
     padding-top: 50px;
-
+    position: absolute;
+    width: 100%;
 }
 
 i {
@@ -37,7 +52,7 @@ i {
     margin: 0;
     list-style: none;
     cursor: pointer;
-    color:rgb(13, 13, 102);
+    color: rgb(13, 13, 102);
 }
 
 
@@ -50,19 +65,30 @@ select {
     text-indent: 1px;
     text-overflow: '';
     font-style: italic;
-    color:rgb(13, 13, 102);
+    color: rgb(13, 13, 102);
 }
 
-.btn{
+.btn {
     margin-bottom: 15px;
-    background-color: rgb(13, 13, 102);
+    background-color: rgb(29, 29, 94);
     color: white;
     font-weight: bolder;
     border: none;
 }
-.btn:hover{
-    background-color: rgb(176, 176, 255);
-    color:rgb(13, 13, 102);
-    transition: .7s;
 
+.btn:hover {
+    margin-bottom: 15px;
+    background-color: rgb(29, 29, 94);
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+.btn:focus {
+    margin-bottom: 15px !important;
+    background-image: linear-gradient(to bottom, rgb(13, 13, 102), rgb(118, 118, 226)) !important;
+    color: white !important;
+    font-weight: bolder !important;
+    box-shadow: none !important;
+    font-size: 17px !important;
 }
