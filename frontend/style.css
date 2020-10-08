@@ -1,9 +1,24 @@
 * {
     padding: 0px;
     margin: 0px;
+    position: 0px;
 }
 
+body{
+    min-height: 100vh;
+}
 
+header{
+    min-height: 100px;
+}
+main {
+    min-height: calc(100vh -170px);
+    background-image: linear-gradient(to top,white,rgb(221, 221, 221));
+}
+
+form{
+    margin-top: 5px;
+}
 .intro-petbook{
     background-image: linear-gradient(to right,rgb(13, 13, 102), rgb(176, 176, 255));
     padding: 1px;
@@ -11,15 +26,10 @@
     
 }
 
-
-main {
-    margin-bottom: 35px;
-}
-
 footer {
-    height: 70px;
-    margin-bottom: 0 !important;
-    color: rgb(13, 13, 102);
+    min-height: 70px;
+    padding-top: 50px;
+
 }
 
 i {
@@ -27,7 +37,9 @@ i {
     margin: 0;
     list-style: none;
     cursor: pointer;
+    color:rgb(13, 13, 102);
 }
+
 
 select {
     cursor: pointer;
@@ -38,12 +50,19 @@ select {
     text-indent: 1px;
     text-overflow: '';
     font-style: italic;
-    color: rgb(8, 8, 87);
+    color:rgb(13, 13, 102);
 }
 
 .btn{
     margin-bottom: 15px;
-    background-color: rgb(188, 188, 252);
-    color: black;
+    background-color: rgb(13, 13, 102);
+    color: white;
     font-weight: bolder;
+    border: none;
+}
+.btn:hover{
+    background-color: rgb(176, 176, 255);
+    color:rgb(13, 13, 102);
+    transition: .7s;
+
 }
