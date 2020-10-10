@@ -9,9 +9,12 @@ body {
     background-size: 100%;
 }
 
-
 header {
     min-height: 100px;
+}
+
+header h1 {
+    margin-top: 15px;
 }
 
 main {
@@ -23,7 +26,6 @@ main {
     main {
         min-height: 80vh;
     }
-
     footer {
         padding: 0px;
     }
@@ -37,7 +39,6 @@ form {
     background-image: linear-gradient(to right, rgb(13, 13, 102), rgb(176, 176, 255));
     padding: 1px;
     color: white;
-
 }
 
 footer {
@@ -54,7 +55,6 @@ i {
     cursor: pointer;
     color: rgb(13, 13, 102);
 }
-
 
 select {
     cursor: pointer;
