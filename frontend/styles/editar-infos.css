@@ -1,0 +1,11 @@
+body {
+    background-color: #fff;
+}
+
+header,
+#footer,
+a,
+#exit-button {
+    background-color: #3f51b5;
+    color: #ebebeb;
+}
