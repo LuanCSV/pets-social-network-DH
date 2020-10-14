@@ -1,0 +1,34 @@
+    body {
+        background-color: #fff;
+    }
+    
+    header,
+    #next-button,
+    #footer,
+    a {
+        background-color: #3f51b5;
+        color: #ebebeb;
+    }
+    
+    #plus-button {
+        position: relative;
+        margin-left: 100px;
+        margin-top: -50px;
+        border: 2px black solid;
+        border-radius: 50%;
+    }
+    
+    .form-control {
+        border-radius: 20px;
+    }
+    
+    #image-insertion {
+        margin: 0 auto;
+    }
+    
+    #insertion-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px dashed black;
+    }
