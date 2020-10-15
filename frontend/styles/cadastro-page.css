@@ -29,7 +29,6 @@ main {
     main {
         min-height: 79vh;
     }
-
     #cad-index {
         margin-left: 30px;
         offset: 20px;
@@ -47,11 +46,11 @@ form {
     margin-top: 5px;
 }
 
-input{
+input {
     border-radius: 50px !important;
 }
 
-small{
+small {
     font-style: italic;
 }
 
@@ -65,19 +64,19 @@ small{
 }
 
 .btn:focus {
-    margin-bottom: 15px ;
-    background-image: linear-gradient(to bottom, rgb(13, 13, 102), rgb(118, 118, 226)) ;
-    color: white ;
-    font-weight: bolder ;
-    box-shadow: none ;
-    font-size: 17px ;
+    margin-bottom: 15px;
+    background-image: linear-gradient(to bottom, rgb(13, 13, 102), rgb(118, 118, 226));
+    color: white;
+    font-weight: bolder;
+    box-shadow: none;
+    font-size: 17px;
 }
 
 footer {
     min-height: 70px;
     padding-top: 25px;
     position: absolute;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
 i {
@@ -88,7 +87,8 @@ i {
     cursor: pointer;
     color: rgb(13, 13, 102);
 }
-i:hover{
+
+i:hover {
     font-weight: bolder;
 }
 
@@ -104,51 +104,51 @@ select {
     font-style: italic;
     color: rgb(13, 13, 102);
 }
-select:hover{
-font-weight: bolder;
+
+select:hover {
+    font-weight: bolder;
 }
 
-.cpr{
+.cpr {
     margin-top: 5px;
     font-size: 12px;
     font-weight: bolder;
     font-style: normal !important;
 }
 
-.cp{
+.cp {
     font-style: normal;
 }
 
 
 /* Smaller than standard 960 (devices and browsers) */
+
 @media only screen and (max-width: 1024px) {
-    p{
+    p {
         font-size: 21px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    p{
+    p {
         font-size: 20px;
     }
 }
 
-
 @media only screen and (max-width: 767px) {
-    p{
+    p {
         font-size: 21px;
     }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-    p{
+    p {
         font-size: 20px;
     }
 }
 
-
 @media only screen and (max-width: 479px) {
-    p{
+    p {
         font-size: 16px;
     }
 }
