@@ -3,11 +3,10 @@ body{
     background: url(https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-attachment: fixed; */
     background-position: center;
-    background-color: aqua;
 
     color: white;
-
 }
 
 .mainSection{
@@ -24,7 +23,6 @@ body{
 .mainSection .header{
     margin-top: 50px;
     margin-left: 40px;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
