@@ -1,0 +1,53 @@
+body{
+    /* background: url(https://meupet.bayer.com/sites/g/files/adhwdz661/files/styles/paragraph_image/public/2020-04/bpc-48_-_filhotes.jpg?itok=A-H2qFJ7); */
+    background: url(https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: aqua;
+
+    color: white;
+
+}
+
+.mainSection{
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(to bottom left, #4051b5bf, #161f55bf);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainSection .header{
+    margin-top: 50px;
+    margin-left: 40px;
+    width: 55%;
+}
+
+.mainSection .header h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    
+}
+.mainSection .header p{
+    margin-left: 10px;
+    
+}
+
+.mainSection .action{
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainSection .action button{
+    margin: 15px auto;
+    padding: 25px;
+}
