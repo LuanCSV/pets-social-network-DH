@@ -13,7 +13,7 @@ body{
     width: 100vw;
     height: 100vh;
 
-    background: linear-gradient(to bottom left, #4051b5bf, #161f55bf);
+    background: linear-gradient(to bottom right, #4051b5bf, #161f55bf);
 
     display: flex;
     flex-direction: column;
@@ -21,8 +21,8 @@ body{
 }
 
 .mainSection .header{
-    margin-top: 50px;
-    margin-left: 40px;
+    padding: 40px;
+
     display: flex;
     flex-wrap: wrap;
 }
@@ -35,12 +35,14 @@ body{
 
 .mainSection .header img{
     margin: 0px 5px;
+
     width: 45px;
     height: 45px;
 }
 
 .mainSection .header p{
     margin-left: 10px;  
+    width: 100%;
 }
 
 .mainSection .action{
@@ -55,4 +57,45 @@ body{
 .mainSection .action button{
     margin: 15px auto;
     padding: 25px;
+}
+
+@media(min-width: 540px) {
+    .mainSection .header{
+        padding: 100px;
+    }
+    .mainSection .header h1{
+        font-size: 50px;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    
+    .mainSection .header img{
+        margin: 0px 10px;
+    
+        width: 50px;
+        height: 50px;
+    }
+    
+    .mainSection .header p{
+        margin-left: 10px;  
+        width: 100%;
+    }
+
+    .mainSection .action{
+        margin-bottom: 50px;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 95%;
+
+    }
+
+    .mainSection .action button{
+        width: 250px;
+        margin: 30px 30px;
+        padding: 30px;
+        font-size: 20px;
+    }
 }
