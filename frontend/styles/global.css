@@ -20,26 +20,55 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-
-    /* transition: background-color ease-in-out 0.4s; */
 }
 
 .botaoLayout:hover{
     background-color: white;
     color: #FF4081;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+/* Botao secundario */
+.botaoSecondary{
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    
+    background-color: #48A7FE;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 2px;
 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.botaoSecondary:hover{
+    background-color: #236db3;
+    color: white;
+}
 /* Usar nos links do site */
-.buttonLink{
+.botaoLink{
     border: none;
     background-color: rgba(255, 255, 255, 0);
-    color: #0276FF;
+    color: #48A7FE;
     font-weight: 600;
-    
+
     transition: color ease-in-out 0.3s;
 }
-.buttonLink:hover{
-    color: #293577;
+
+.botaoLink:hover{
+    color: #236db3;
+}
+
+/* Inputs caixas de texto */
+
+.inputLayout {
+    text-align: center;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 50px;
+    height: calc(2.25rem + 2px);
 }
