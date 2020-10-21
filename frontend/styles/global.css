@@ -1,3 +1,16 @@
+:root{
+    --button-primary-color:  #FF4081;
+
+    --button-secondary-color: #48A7FE;
+    --button-secondary-hover: #236db3;
+
+    --button-close-color: #f44336;
+    --button-close-hover: #bb0d01;
+
+    --input-bg-color: #EBEBEB;
+    --transparent-color: #ffffff00;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +29,7 @@ button{
     width: 175px;
     border: none;
     
-    background-color: #FF4081;
+    background-color: var(--button-primary-color);
     color: white;
     font-size: 16px;
     letter-spacing: 4px;
@@ -28,7 +41,7 @@ button{
 
 .botaoLayout:hover{
     background-color: white;
-    color: #FF4081;
+    color: var(--button-primary-color);
 }
 
 /* Botao secundario */
@@ -37,7 +50,7 @@ button{
     border-radius: 50px;
     border: none;
     
-    background-color: #48A7FE;
+    background-color: var(--button-secondary-color);
     color: #ffffff;
     font-size: 12px;
     letter-spacing: 2px;
@@ -48,7 +61,7 @@ button{
 }
 
 .botaoSecondary:hover{
-    background-color: #236db3;
+    background-color: var(--button-secondary-hover);
 }
 
 /* Botao para fechar */
@@ -73,15 +86,15 @@ button{
 /* Usar nos links do site */
 .botaoLink{
     border: none;
-    background-color: rgba(255, 255, 255, 0);
-    color: #48A7FE;
+    background-color: var(--transparent-color);
+    color:var(--button-secondary-color);
     font-weight: 600;
 
     transition: color ease-in-out 0.3s;
 }
 
 .botaoLink:hover{
-    color: #236db3;
+    color: var(--button-secondary-hover);
 }
 
 /* Inputs caixas de texto */
@@ -90,8 +103,8 @@ button{
     text-align: center;
     width: 100%;
     padding: 25px 10px;
-    background-color: #EBEBEB;
-    border: 1px solid #EBEBEB;
+    background-color: var(--input-bg-color);
+    border: 1px solid var(--input-bg-color);
     border-radius: 50px;
     height: calc(2.25rem + 2px);
 }
