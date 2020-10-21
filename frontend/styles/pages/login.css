@@ -1,3 +1,7 @@
+*{
+    overflow: hidden;
+}
+
 body {
     min-height: 100vh;
     max-height: 100vh;
@@ -164,4 +168,9 @@ footer a:hover{
 
 .modal-terms{
     min-width: 30%;
+}
+
+.modal-terms .modal-body{
+    overflow-y: auto;
+    height: calc(100vh - 200px);
 }
