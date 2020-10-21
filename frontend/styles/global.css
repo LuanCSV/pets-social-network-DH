@@ -1,5 +1,6 @@
 :root{
     --button-primary-color:  #FF4081;
+    --button-primary-hover:  #b82d5b;;
 
     --button-secondary-color: #48A7FE;
     --button-secondary-hover: #236db3;
@@ -40,8 +41,8 @@ button{
 }
 
 .botaoLayout:hover{
-    background-color: white;
-    color: var(--button-primary-color);
+    background-color: var(--button-primary-hover);
+    color: #ffffff;
 }
 
 /* Botao secundario */

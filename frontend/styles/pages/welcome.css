@@ -60,6 +60,10 @@ body{
     margin: 15px auto;
     padding: 25px;
 }
+.botaoLayout:hover{
+    background-color: white;
+    color: #FF4081;
+}
 
 @media(min-width: 540px) {
     .mainSection .header{
