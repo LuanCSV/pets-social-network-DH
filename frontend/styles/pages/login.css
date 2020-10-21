@@ -105,7 +105,6 @@ footer a{
     margin: auto;
     
     border-radius: 50px;
-    /* color: #48A7FE !important; */
     font-weight: 600;
     text-align: center;
     cursor: pointer;
@@ -114,7 +113,6 @@ footer a{
 
 footer a:hover{
     background-color: #f4f4f4;
-    /* color: white !important; */
 }
 
 .footerCopyright {

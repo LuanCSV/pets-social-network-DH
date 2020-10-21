@@ -117,11 +117,46 @@
 
           <div class="custom-control custom-checkbox text-center">
             <input type="checkbox" class="custom-control-input" id="checkboxTermos">
-            <label class="custom-control-label" for="checkboxTermos"><button class="botaoLink">Termos de Uso</button></label>
+            <label class="custom-control-label" for="checkboxTermos">
+              <button class="botaoLink" data-toggle="modal" data-target="#modalTermos">Termos de Uso</button>
+            </label>
           </div>
         </div>
         <div class="modal-footer">
           <button type="submit" class="botaoLayout m-0">Criar conta</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalTermos" tabindex="-1" role="dialog" 
+    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTermosTitle">Termos de Uso</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Debitis eum provident animi non cupiditate aliquam quos iusto inventore culpa, esse beatae minima, eos natus quas eius tempora, possimus ratione commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Eveniet molestias aperiam inventore maiores aspernatur, rerum at corporis nemo consequatur nihil deleniti explicabo neque deserunt numquam dolorum! Totam aliquam enim eos. <br>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Debitis eum provident animi non cupiditate aliquam quos iusto inventore culpa, esse beatae minima, eos natus quas eius tempora, possimus ratione commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Eveniet molestias aperiam inventore maiores aspernatur, rerum at corporis nemo consequatur nihil deleniti explicabo neque deserunt numquam dolorum! Totam aliquam enim eos. 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Debitis eum provident animi non cupiditate aliquam quos iusto inventore culpa, esse beatae minima, eos natus quas eius tempora, possimus ratione commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Eveniet molestias aperiam inventore maiores aspernatur, rerum at corporis nemo consequatur nihil deleniti explicabo neque deserunt numquam dolorum! Totam aliquam enim eos. <br>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+          Debitis eum provident animi non cupiditate aliquam quos iusto inventore culpa, esse beatae minima, eos natus quas eius tempora, possimus ratione commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Eveniet molestias aperiam inventore maiores aspernatur, rerum at corporis nemo consequatur nihil deleniti explicabo neque deserunt numquam dolorum! Totam aliquam enim eos. 
+          Debitis eum provident animi non cupiditate aliquam quos iusto inventore culpa, esse beatae minima, eos natus quas eius tempora, possimus ratione commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+          Eveniet molestias aperiam inventore maiores aspernatur, rerum at corporis nemo consequatur nihil deleniti explicabo neque deserunt numquam dolorum! Totam aliquam enim eos. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="botaoClose" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
@@ -131,7 +166,7 @@
   <footer>
     <a>Sobre</a>
     <a>Ajuda</a>
-    <a>Termos</a>
+    <a data-toggle="modal" data-target="#modalTermos">Termos</a>
     <a>Contato</a>
 
     <div class="footerCopyright">
