@@ -161,3 +161,7 @@ footer a:hover{
         max-height: 780px;
     }
 }
+
+.modal-terms{
+    min-width: 30%;
+}
