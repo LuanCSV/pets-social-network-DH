@@ -139,3 +139,12 @@ footer a:hover{
         max-height: calc(100vh - 200px);
     }
 }
+
+.modal-footer .botaoClose,
+.modal-footer .botaoLayout{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: auto;
+}

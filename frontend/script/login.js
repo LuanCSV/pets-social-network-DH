@@ -1,18 +1,17 @@
-const loginFake = `exemplo@exemplo.com.br`
-const senhaFake = `123456`
+const loginFake = `exemplo@exemplo.com.br`;
+const senhaFake = `123456`;
 
 function pega(element){
    element.preventDefault()
-    let login = document.getElementById('inputEmail').value
-    let senha = document.getElementById('inputSenha').value
+    let login = document.getElementById('inputEmailLogin').value;
+    let senha = document.getElementById('inputSenhaLogin').value;
+    $('#modalLogin').modal('show');
     if(loginFake === login && senhaFake === senha){
-        $('#modalLoginTrue').modal('show')
+        document.getElementById('is_logged?').innerText = "Logado com Sucesso!"
     }else{
-        
-        document.getElementById('inputEmail').value = "";
-        document.getElementById('inputSenha').value = "";
-        $('#modalLoginFalse').modal('show')
-        
+        document.getElementById('is_logged?').innerText = "Usuario ou Senha inválida, verifique e tente novamente!"
+        document.getElementById('inputEmailLogin').value = "";
+        document.getElementById('inputSenhaLogin').value = "";
     }
 
 }

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/icons/pata.ico" />
-  <title>PetBook | Bem-vindo</title>
+  <title>PetBook | Acesse</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/global.css">
@@ -22,7 +22,7 @@
     <section class="row">
 
       <!--Inicio Carrosel Fotos -->
-      <div id="img-index" class="col-12 col-md-10 col-lg-8 mt-3 mr-md-auto ml-md-auto p-0 float-left">
+      <div id="img-index" class="col-12 col-md-10 col-lg-7 mt-3 mr-md-auto mr-lg-0 ml-md-auto p-0 float-left">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -60,21 +60,21 @@
       <div id="main-card" class="col-10 col-md-5 col-lg-3 m-lg-auto p-0 float-right">
         <form>
           <div class="form-group">
-            <label for="E-mail de cadastro">Email</label>
-            <input type="email" class="form-control inputLayout" id="inputEmail" aria-describedby="emailHelp" placeholder="">
+            <label for="inputEmailLogin">Email</label>
+            <input type="email" class="form-control inputLayout" id="inputEmailLogin" aria-describedby="emailHelp" placeholder="">
             <small id="exemplo-email" class="form-text text-muted">Exemplo: cachorro@email.com</small>
           </div>
           
           <div class="form-group">
-            <label for="Senha de acesso">Senha</label>
-            <input type="password" class="form-control inputLayout" id="inputSenha" placeholder="">
+            <label for="inputSenhaLogin">Senha</label>
+            <input type="password" class="form-control inputLayout" id="inputSenhaLogin" placeholder="">
           </div>
           
           <div class="form-group text-center mb-0">
             <button class="botaoLink" type="button">Esqueceu sua senha?</button> <br>
             <button type="submit" class="botaoLayout" id="btnLogin">Entrar</button> <br>
             <hr>
-            <button class="botaoSecondary" type="button">Ainda não tem conta?</button>
+            <button class="botaoSecondary" type="button" data-toggle="modal" data-target="#registerModal">Ainda não tem conta?</button>
           </div>
         
         </form>
@@ -84,6 +84,48 @@
 
   </main>
   <!--final Tela Login -->
+
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="inputNome">Nome</label>
+            <input type="text" class="form-control inputLayout" id="inputNome">
+          </div>
+
+          <div class="form-group">
+            <label for="inputEmailCadastro">E-mail</label>
+            <input type="email" class="form-control inputLayout" id="inputEmailCadastro">
+          </div>
+          
+          <div class="form-group">
+            <label for="inputSenhaCadastro">Senha</label>
+            <input type="password" class="form-control inputLayout" id="inputSenhaCadastro">
+          </div>
+
+          <div class="form-group">
+            <label for="inputConfirmSenha">Confirme sua senha</label>
+            <input type="password" class="form-control inputLayout" id="inputConfirmSenha">
+          </div>
+
+          <div class="custom-control custom-checkbox text-center">
+            <input type="checkbox" class="custom-control-input" id="checkboxTermos">
+            <label class="custom-control-label" for="checkboxTermos"><button class="botaoLink">Termos de Uso</button></label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="botaoLayout m-0">Criar conta</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -100,8 +142,8 @@
 
   </footer>
 
-  <!-- Inicio Modal -->
-  <div class="modal fade" id="modalLoginTrue" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Inicio Modal erro no login-->
+  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -110,28 +152,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <h5>Logado com Sucesso!</h5>
+          <h5 id="is_logged?">Ainda n sabemos</h5>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Meio Modal -->
-  <div class="modal fade" id="modalLoginFalse" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <h5>Usuario ou Senha inválida, verifique e tente novamente!</h5>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary " data-dismiss="modal">Fechar</button>
+          <button type="button" class="botaoClose" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
