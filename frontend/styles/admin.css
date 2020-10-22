@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0 !important;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+
+    display: grid;
+
+    height: 100vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 15vh 10vh 25vh 25vh 25vh;
+    grid-template-areas:
+        "nav1 nav2 nav2 nav3"
+        "rotulo1 rotulo2 rotulo2 rotulo2"
+        "itens grafico grafico perfis"
+        "itens grafico grafico posts"
+        "sair usuario denuncia curtida";
+
+}
+/*Canto Superior Direito - Início PetBook */
+#logo-adm {
+    grid-area: nav1;
+
+    align-items: center;
+    padding: 20px !important;
+
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+
+
+}
+/*Parte Superior ao Meio - Menu da página */
+#menu-adm1 {
+    grid-area: nav2;
+
+    display: grid;
+    grid-template-columns: 16% 16% 16% 48%;
+    align-items: center;
+
+
+    background-color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
+#menu-adm1 a {
+    color: white;
+    text-decoration: none;
+}
+#menu-adm1 a:hover {
+    color: rgb(30, 30, 128);
+}
+
+/*Canto Superior a Direita - Perfil do Usuário e Foto do Pet*/
+#usuario-adm {
+    grid-area: nav3;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center;
+
+    background-color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#usuario-adm a {
+    color: white;
+    text-decoration: none;
+}
+
+#usuario-adm a:hover {
+    color: rgb(30, 30, 128);
+}
+
+#usuario-adm img {
+    border-radius: 50%;
+}
+
+#usuario-adm img:hover {
+    cursor: pointer;
+}
+
+/*Barra Lateral Direita da Página*/
+#menu-adm2 {
+    background-color: rgb(236, 228, 228);
+    grid-area: rotulo1;
+
+    display: grid;
+
+    align-content: center;
+    align-items: center;
+
+    padding-left: 20px !important;
+}
+
+#menu-adm2 p {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(35, 35, 161);
+}
+
+/*Centro da Pagina Contem o Gráfico e os dados Estatisticos*/
+#pg-adm {
+    grid-area: rotulo2;
+
+    display: grid;
+
+    align-content: center;
+    align-items: center;
+}
+
+#pg-adm p {
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(35, 35, 161);
+}
+#grafico-adm {
+    grid-area: grafico;
+
+    display: grid;
+    justify-content: center;
+}
+#perfil-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: perfis;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+#perfil-adm p {
+    font-size: 45px;
+    text-align: center;
+}
+
+#num-pos-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: posts;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+#num-pos-adm p {
+    font-size: 45px;
+    text-align: center;
+}
+
+
+#num-usu-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: usuario;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+#num-usu-adm p {
+    font-size: 45px;
+    text-align: center;
+}
+
+#num-den-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: denuncia;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+#num-den-adm p {
+    font-size: 45px;
+    text-align: center;
+}
+
+#num-cur-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: curtida;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+
+#num-cur-adm p {
+    font-size: 45px;
+    text-align: center;
+}
+
+
+/*Barra Lateral a Direita*/
+#sidebar {
+    background-color: rgb(236, 228, 228);
+    grid-area: itens;
+
+    display: grid;
+    padding-left: 5px;
+    grid-template-rows: 25% 25% 25% 25%;
+    align-items: flex-start;
+    padding-left: 20px !important;
+}
+
+#sidebar a {
+
+    color: rgb(35, 35, 161);
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    font-weight: bold;
+}
+
+
+/*Canto Inferior Direito*/
+#sair-pg-adm {
+    background-color: rgb(236, 228, 228);
+    grid-area: sair;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+#sair-pg-adm a {
+    width: 200px;
+    height: 50px;
+
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgb(119, 106, 106);
+}
