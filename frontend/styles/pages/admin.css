@@ -100,6 +100,7 @@
 }
 /* HEADER - MENU FINAL */
 
+/* SIDEBAR */
 .content{
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +118,25 @@
     background-color: #424242;
 }
 
+.content .menu-admin header{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.content .menu-admin header h3{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.content a{
+    text-decoration: none;
+    padding: 20px 40px;
+    color: white;
+}
+.content a:hover{
+    background-color: #242424;
+}
 .content .botaoClose{
     bottom: 0;
     position: absolute;
@@ -129,6 +149,7 @@
     font-size: 25px;
 }
 
+/* FINAL DA SIDE BAR */
 
 .content .container {
     margin: auto;
@@ -147,24 +168,10 @@
         "usuario denuncia curtida";
 }
 
+
+
 /*Barra Lateral Direita da Página*/
-#menu-adm2 {
-    background-color: rgb(236, 228, 228);
-    grid-area: rotulo1;
 
-    display: grid;
-
-    align-content: center;
-    align-items: center;
-
-    padding-left: 20px !important;
-}
-
-#menu-adm2 p {
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(35, 35, 161);
-}
 
 /*Centro da Pagina Contem o Gráfico e os dados Estatisticos*/
 #pg-adm {
