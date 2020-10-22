@@ -23,9 +23,9 @@ function drawChart() {
   chart.draw(data, options);
 }
 
-$(window).resize(function () {
-  desenharPizza();
-});
+// $(window).resize(function () {
+//     desenharPizza();
+// });
 
 
 google.charts.setOnLoadCallback(drawChart);

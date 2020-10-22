@@ -54,6 +54,7 @@
     order: 2;
     width: 30%;
     margin: 0px auto;
+    z-index: 10;
     background:linear-gradient(to bottom, #4052b5,  #233494);
     border-radius: 20px;
 }
@@ -101,11 +102,11 @@
 /* HEADER - MENU FINAL */
 
 /* SIDEBAR */
-.content{
+.body{
     display: flex;
     flex-wrap: wrap;
 }
-.content .menu-admin{
+.body .menu-admin{
     display: flex;
     flex-flow: column;
     height: calc(100vh - 100px);
@@ -118,26 +119,26 @@
     background-color: #424242;
 }
 
-.content .menu-admin header{
+.body .menu-admin header{
     width: 100%;
     margin: 20px auto;
     text-align: center;
 }
 
-.content .menu-admin header h3{
+.body .menu-admin header h3{
     color: white;
     font-size: 1.2rem;
 }
 
-.content a{
+.body a{
     text-decoration: none;
     padding: 20px 40px;
     color: white;
 }
-.content a:hover{
+.body a:hover{
     background-color: #242424;
 }
-.content .botaoClose{
+.body .botaoClose{
     bottom: 0;
     position: absolute;
     width: 100%;
@@ -151,154 +152,79 @@
 
 /* FINAL DA SIDE BAR */
 
-.content .container {
-    margin: auto;
+/* COMECO DO CORPO GERAL */
+.body .container{
+    margin: 0px auto;
     padding: 0;
-    display: grid;
     width: 70%;
-    background-color: tomato;
+
     height: calc(100vh - 100px);
+    width: calc(100vw -25%);
+}
+.body .container h2{
+    width: 100%;
+    margin: 10px 0px 0px 10px;
+}
+
+.body .container .infos{
+    display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 15vh 25vh 25vh 25vh;
+    grid-template-rows: 25vh 25vh 25vh;
     grid-template-areas:
-        "rotulo2 rotulo2 rotulo2"
         "grafico grafico perfis"
         "grafico grafico posts"
         "usuario denuncia curtida";
 }
+/* FINAL DO CORPO GERAL */
 
+.card-info{
+    font-size: 24px;
+    z-index: 10;
+    margin: 5px;
+    border-radius: 50px;
+    /* border: 1px solid #6161612a; */
+    
+    background-color: #f1f1f1;
+    
+    min-width: 150px;
+    max-width: 300px;
+    min-height: 150px;
+    max-height: 200px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
 
-/*Barra Lateral Direita da Página*/
-
+}
 
 /*Centro da Pagina Contem o Gráfico e os dados Estatisticos*/
-#pg-adm {
-    grid-area: rotulo2;
 
-    display: grid;
-
-    align-content: center;
-    align-items: center;
-}
-
-#pg-adm p {
-    margin-left: 10px;
-    font-size: 25px;
-    font-weight: bold;
-    color: rgb(35, 35, 161);
-}
 #grafico-adm {
     grid-area: grafico;
-
-    display: grid;
-    justify-content: center;
+    /* background-color: violet; */
+}
+#post-adm{
+    grid-area: posts;
+}
+#user-adm{
+    grid-area: usuario;
+}
+#report-adm{
+    grid-area: denuncia;
+}
+#likes-adm{
+    grid-area: curtida;
 }
 #perfil-adm {
-    background-color: rgb(236, 228, 228);
     grid-area: perfis;
-
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    margin-right: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px grey;
 }
 
-#perfil-adm p {
-    font-size: 45px;
-    text-align: center;
-}
-
-#num-pos-adm {
-    background-color: rgb(236, 228, 228);
-    grid-area: posts;
-
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    margin-top: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px grey;
-}
-
-#num-pos-adm p {
-    font-size: 45px;
-    text-align: center;
-}
-
-
-#num-usu-adm {
-    background-color: rgb(236, 228, 228);
-    grid-area: usuario;
-
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px grey;
-}
-
-#num-usu-adm p {
-    font-size: 45px;
-    text-align: center;
-}
-
-#num-den-adm {
-    background-color: rgb(236, 228, 228);
-    grid-area: denuncia;
-
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px grey;
-}
-
-#num-den-adm p {
-    font-size: 45px;
-    text-align: center;
-}
-
-#num-cur-adm {
-    background-color: rgb(236, 228, 228);
-    grid-area: curtida;
-
-    display: grid;
-    align-content: center;
-    justify-content: center;
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px grey;
-}
-
-#num-cur-adm p {
-    font-size: 45px;
-    text-align: center;
-}
 
 
 /*Barra Lateral a Direita*/
+
 
 
 
