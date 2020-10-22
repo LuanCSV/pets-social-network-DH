@@ -19,6 +19,13 @@
         border: 2px dashed #293577;
     }
     
+    .options-profiles div {
+        width: 100px;
+        height: 100px;
+        border-radius: 4px;
+        border: 2px dashed #293577;
+    }
+    
     .changing-password-option {
         text-decoration: none;
     }
@@ -28,4 +35,10 @@
         width: 100vw;
         height: 255vh;
         color: ivory;
+    }
+    
+    #criar-perfil,
+    #saving-button {
+        background-color: #293577;
+        border: 2px solid #293577;
     }
