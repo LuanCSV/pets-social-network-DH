@@ -1,11 +1,4 @@
-* {
-    margin: 0;
-    padding: 0 !important;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-.container-fluid {
+/* .container-fluid {
 
     display: grid;
 
@@ -19,73 +12,100 @@
         "itens grafico grafico perfis"
         "itens grafico grafico posts"
         "sair usuario denuncia curtida";
+} */
 
-}
-/*Canto Superior Direito - Início PetBook */
-#logo-adm {
-    grid-area: nav1;
+/* HEADER - MENU */
+.header{
+    background-color: #4052b5;
+    max-height: 100px;
+    height: 100px;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px !important;
+}
+.header .logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    min-width: 205px;
+}
 
-    background-color: blue;
+.header .logo h1{
     color: white;
-    font-weight: bold;
-    font-size: 40px;
-
-
+    font-size: 35px;
+    margin: 0;
 }
-/*Parte Superior ao Meio - Menu da página */
-#menu-adm1 {
-    grid-area: nav2;
 
-    display: grid;
-    grid-template-columns: 16% 16% 16% 48%;
+.header .logo img{
+    margin-left: 10px;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.header .user{
+    width: 25%;
+    display: flex;
     align-items: center;
+    justify-content: flex-end;
 
-
-    background-color: blue;
-    font-weight: bold;
-    font-size: 20px;
 }
-#menu-adm1 a {
-    color: white;
-    text-decoration: none;
-}
-#menu-adm1 a:hover {
-    color: rgb(30, 30, 128);
-}
-
-/*Canto Superior a Direita - Perfil do Usuário e Foto do Pet*/
-#usuario-adm {
-    grid-area: nav3;
-
-    display: grid;
-    grid-template-columns: 50% 50%;
-    align-items: center;
-    text-align: center;
-
-    background-color: blue;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-#usuario-adm a {
+.header .user a{
     color: white;
     text-decoration: none;
+    margin-right: 20px;
 }
 
-#usuario-adm a:hover {
-    color: rgb(30, 30, 128);
-}
-
-#usuario-adm img {
+.header .user img {
     border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
-#usuario-adm img:hover {
-    cursor: pointer;
+.header .menu{
+    order: 2;
+    width: 40%;
+    margin: 0px auto;
+    background:linear-gradient(to bottom, #4052b5,  #233494);
+    border-radius: 20px;
 }
+
+.header .menu ul li{
+    text-align: center;
+}
+
+.menu .nav-item .nav-link{
+    width: 100%;
+    color: white;
+    margin: 0px auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.menu .nav-item .nav-link:hover{
+    color: whitesmoke;
+    background-color: #1d2c83;
+    
+}
+
+@media (min-width:991px){
+    .header .logo{
+        justify-content: flex-start;
+    }
+    .header .user{
+        order: 2;
+    }
+
+    .header .menu{
+        order: 1;
+        background: #4052b5;
+    }
+}
+/* HEADER - MENU FINAL */
+
+
 
 /*Barra Lateral Direita da Página*/
 #menu-adm2 {
