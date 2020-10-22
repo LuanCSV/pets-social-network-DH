@@ -1,78 +1,31 @@
     * {
-        margin: 0%;
-        padding: 0%;
-        border: 0%;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
     }
     
-    body {
-        background-color: #fff;
-        width: 100%;
-        z-index: 2;
+    .upper-part {
+        background-color: white;
+        width: 100vw;
+        height: 75vh;
+        color: #293577;
     }
     
-    header,
-    #footer,
-    a,
-    #exit-button {
-        background-color: #3f51b5;
-        color: #ebebeb;
-    }
-    
-    .card-title {
-        color: #3f51b5;
-    }
-    
-    #exit-button {
-        position: fixed;
-        bottom: -10px;
-    }
-    
-    #button-sair {
-        width: 100px;
-        height: auto;
-        padding: 7px;
-        font-size: x-large;
-    }
-    
-    #user-image {
-        width: 150px;
-        height: 150px;
+    #profile-image {
+        width: 240px;
+        height: 240px;
         border-radius: 50%;
-        border: 2px #ebebeb dashed;
+        border: 2px dashed #293577;
     }
     
-    #user-image-modal {
-        width: 150px;
-        height: 150px;
-        margin-left: 30%;
-        border-radius: 50%;
-        border: 2px #3f51b5 dashed;
-    }
-    
-    #plus-button-modal {
-        position: absolute;
-        margin-left: 160px;
-        margin-top: -500px;
-        border: 2px black solid;
-        border-radius: 50%;
-    }
-    
-    .options {
-        display: flex;
-        flex-direction: row;
-        color: #ebebeb;
-        font-size: 40px;
-        font-weight: 700;
-    }
-    
-    .profile {
-        margin: 5px;
-        width: 80px;
-        height: 80px;
-        border-radius: 4px;
-    }
-    
-    #senha-mudar {
+    .changing-password-option {
         text-decoration: none;
-        background-color: transparent;
+    }
+    
+    .lower-part {
+        background-color: #293577;
+        width: 100vw;
+        height: 255vh;
+        color: ivory;
     }

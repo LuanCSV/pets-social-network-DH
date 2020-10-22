@@ -12,143 +12,75 @@
 
 <body>
 
-    <header class="intro-petbook d-flex mx-auto my-0">
-        <div class="container d-flex text-center my-0">
-        </div>
-    </header>
 
-    <main class="container-fluid d-flex justify-content-center my-0">
 
-        <div class="card-group text-center">
-            <div class="card w-100 text-center">
-                <div class="card text-white bg-secondary mb-5">
-                    <div class="card-header">Minhas informações</div>
-                    <div class="card-body text-center mx-auto my-5">
-                        <img src="../assets/carousel-item1.jpg" class="mx-0" id="user-image" alt="foto para o pet">
-                        <p class="card-text my-2">Nome completo da pessoa</p>
-                        <p class="card-text">99 anos</p>
-                        <a class="card-text" id="senha-mudar">Alterar senha</a>
+    <main>
+        <section class="upper-part">
+            <div class="top-header text-center align-center">
+                <h2 class="h2 mt-2">Minhas informações</h2>
+                <hr class="line">
+            </div>
+            <div class="image-place text-center mt-1">
+                <img src="../assets/carousel-item1.jpg" id="profile-image" alt="user profile image">
+            </div>
+
+            <div class="information text-center mt-5">
+                <h5>Nome completo do usuário</h5>
+                <p>99 anos</p>
+            </div>
+        </section>
+        <div class="lower-part">
+            <div class="top-header text-center align-center">
+                <h4 class="h4 mt-2">Selecione o perfil</h4>
+            </div>
+            <div class="profiles">
+                <div class="options-profiles">
+                    <div class="my-profiles">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                          </button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            Launch demo modal
+                          </button>
                     </div>
-                </div>
-                <div class="card-body w-100">
-                    <div class="button-group w-100">
-                        <h4 class="card-title">Selecione o Perfil</h4>
-                        <!-- Button trigger modal -->
-                        <div class="options mx-4 mt-5">
-                            <img src="../assets/carousel-item1.jpg" class="profile" type="button" class="btn btn-primary align-middle" data-toggle="modal" data-target="#staticBackdrop">
+                    <div class="adding-a-new-one">
 
-                            <img src="../assets/carousel-item1.jpg" class="profile" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-
-                            <a type="button" class="profile d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#staticBackdropPlus">+</a>
-                        </div>
-                        <div class="button-group">
-                            <button id="button-sair" class="btn btn-secondary mt-5"><sapn>&#8688;</sapn> Sair </button>
-                        </div>
-                        <!-- Modal Profiles-->
-                        <div class="modal modal-sm fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content d-flex justify-content-center">
-                                    <div class="modal-header mx-5">
-                                        <div class="modal-header-body">
-                                            <img src="../assets/carousel-item1.jpg" id="user-image-modal" alt="foto para o pet">
-                                            <button id="plus-button-modal" class="btn">+</button>
-                                        </div>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body d-flex justify-content-center">
-                                        <form class="form w-75 my-5">
-                                            <div class="form-group">
-                                                <label for="exampleInputName">Nome Completo</label>
-                                                <input type="text" class="form-control shadow-lg p-3 mb-5 bg-white rounded" placeholder="Nome completo do pet" id="exampleInputName" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group ">
-                                                <label for="exampleInputPassword1 ">Idade</label>
-                                                <input type="password " class="form-control shadow-lg p-3 mb-5 bg-white rounded " placeholder="7 anos" id="exampleInputPassword1 ">
-                                            </div>
-                                            <div class="form-group ">
-                                                <label for="exampleInputPassword1 ">País</label>
-                                                <input type="password " class="form-control shadow-lg p-3 mb-5 bg-white rounded " placeholder="Brasil" id="exampleInputPassword1 ">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email</label>
-                                                <input type="email" class="form-control shadow-lg p-3 mb-5 bg-white rounded" placeholder="seuemail@seuemail.com" id=" exampleInputEmail1 " aria-describedby="emailHelp ">
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer ">
-                                        <button type="button " class="btn btn-primary ">Salvar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Modal Plus button-->
-                        <div class="modal modal-sm fade" id="staticBackdropPlus" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content d-flex justify-content-center">
-                                    <div class="modal-header">
-                                        <img src="../assets/carousel-item1.jpg" id="user-image-modal" alt="foto para o pet">
-                                        <button id="plus-button-modal" class="btn">+</button>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body d-flex justify-content-center">
-                                        <form class="form w-75 my-5">
-                                            <div class="form-group">
-                                                <label for="exampleInputName">Nome do Pet</label>
-                                                <input type="text" class="form-control shadow-lg p-3 mb-5 bg-white rounded" id="exampleInputName" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group ">
-                                                <label for="exampleInputPassword1 ">Aniversário</label>
-                                                <input type="datetime " class="form-control shadow-lg p-3 mb-5 bg-white rounded " id="exampleInputPassword1 ">
-                                            </div>
-                                            <div class="radio-buttons d-flex">
-                                                <div class="form-group mx-5">
-                                                    <label for="exampleInputradio1 ">Macho</label>
-                                                    <input type="radio" class="form-control" id="exampleInputradio1 ">
-                                                </div>
-                                                <div class="form-group ">
-                                                    <label for="exampleInputradio2 ">Femea</label>
-                                                    <input type="radio" class="form-control" id="exampleInputradio2 ">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputRaça">Raça</label>
-                                                <input type="text" class="form-control shadow-lg p-3 mb-5 bg-white rounded" id="exampleInputRaça" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="exampleInputPais">País</label>
-                                                <input type="text" class="form-control shadow-lg p-3 mb-5 bg-white rounded" id="exampleInputPais" aria-describedby="emailHelp">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer ">
-                                        <button type="button " class="btn btn-primary ">Criar Novo Perfil</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- Modal My-Profiles-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Perfil</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                        <button type="button" class="btn btn-primary">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="footer ">
 
-    </main>
 
-    <!-- Footer -->
-    <footer id="footer ">
-
-
-    </footer>
+        </footer>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
-    <script src="script.js "></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+        <script src="script.js "></script>
 </body>
 
 </html>
