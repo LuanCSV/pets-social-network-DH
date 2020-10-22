@@ -1,43 +1,27 @@
-/* .container-fluid {
-
-    display: grid;
-
-    height: 100vh;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 15vh 10vh 25vh 25vh 25vh;
-    grid-template-areas:
-        "nav1 nav2 nav2 nav3"
-        "rotulo1 rotulo2 rotulo2 rotulo2"
-        "itens grafico grafico perfis"
-        "itens grafico grafico posts"
-        "sair usuario denuncia curtida";
-} */
-
 /* HEADER - MENU */
 .header{
     background-color: #4052b5;
     max-height: 100px;
     height: 100px;
-
+    padding: 0px;
+    max-width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+
 }
 .header .logo{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 25%;
     min-width: 205px;
+    margin: 0px auto 0px 0px;
 }
 
 .header .logo h1{
     color: white;
-    font-size: 35px;
-    margin: 0;
+    font-size: 30px;
+    margin: 0px;
 }
 
 .header .logo img{
@@ -47,10 +31,11 @@
 }
 
 .header .user{
-    width: 25%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin: 0px 20px 0px 0px;
+    float: right;
 
 }
 .header .user a{
@@ -67,7 +52,7 @@
 
 .header .menu{
     order: 2;
-    width: 40%;
+    width: 30%;
     margin: 0px auto;
     background:linear-gradient(to bottom, #4052b5,  #233494);
     border-radius: 20px;
@@ -93,9 +78,19 @@
 @media (min-width:991px){
     .header .logo{
         justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .header .logo h1{
+        font-size: 35px;
+
+    }
+    .header .logo img{
+        max-height: 30px;
+        max-width: 30px;
     }
     .header .user{
         order: 2;
+        margin-right: 20px;
     }
 
     .header .menu{
@@ -105,7 +100,52 @@
 }
 /* HEADER - MENU FINAL */
 
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .menu-admin{
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - 100px);
+    min-width: 250px;
+    max-width: 350px;
+    margin: 0px;
+    position: relative;
+    width: 25%;
 
+    background-color: #424242;
+}
+
+.content .botaoClose{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 30px;
+    
+    border-radius: 0;
+    
+    letter-spacing: 4px;
+    font-size: 25px;
+}
+
+
+.content .container {
+    margin: auto;
+    padding: 0;
+    display: grid;
+    width: 70%;
+    background-color: tomato;
+    height: calc(100vh - 100px);
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15vh 25vh 25vh 25vh;
+    grid-template-areas:
+        "rotulo2 rotulo2 rotulo2"
+        "grafico grafico perfis"
+        "grafico grafico posts"
+        "usuario denuncia curtida";
+}
 
 /*Barra Lateral Direita da Página*/
 #menu-adm2 {
@@ -252,48 +292,7 @@
 
 
 /*Barra Lateral a Direita*/
-#sidebar {
-    background-color: rgb(236, 228, 228);
-    grid-area: itens;
-
-    display: grid;
-    padding-left: 5px;
-    grid-template-rows: 25% 25% 25% 25%;
-    align-items: flex-start;
-    padding-left: 20px !important;
-}
-
-#sidebar a {
-
-    color: rgb(35, 35, 161);
-    text-decoration: none;
-}
-
-#sidebar a:hover {
-    font-weight: bold;
-}
 
 
-/*Canto Inferior Direito*/
-#sair-pg-adm {
-    background-color: rgb(236, 228, 228);
-    grid-area: sair;
 
-    display: grid;
-    align-content: center;
-    justify-content: center;
-}
 
-#sair-pg-adm a {
-    width: 200px;
-    height: 50px;
-
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: rgb(119, 106, 106);
-}
