@@ -72,11 +72,12 @@ main{
 }
 
 .mensagemErros{
-    margin-left: 10px;
-    font-style: italic;
-    color:crimson
-}
+    margin: 0px 0px 0px 10px;
+    font-size: 12px;
+    color:crimson;
 
+    font-weight: bold;
+}
 
 .buttonLink{
     margin: 0px auto;
@@ -88,7 +89,6 @@ main{
     font-weight: 600;
     padding: 15px;
 }
-
 
 .botaoSecondary{
     font-weight: 600;
@@ -139,20 +139,24 @@ footer a:hover{
 
     main {
         min-height: calc(100vh - 200px);
-        max-height: calc(100vh - 200px);
+        /* max-height: calc(100vh - 200px); */
     }
-    .form-group label{
+    /* Margin responsivo do label e msg de erro */
+    .form-group label, .mensagemErros{
         margin-left: 35px;
     }
+    
     .modal-body .form-group input{
         width: 90%;
-        margin: auto auto 25px auto;
+        margin: auto auto 0px auto;
     }
 
     .modal-terms .modal-body{
         overflow-y: auto;
         height: calc(100vh - 200px);
     }
+
+    
 }
 
 .modal-footer .botaoClose,
