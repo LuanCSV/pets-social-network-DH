@@ -1,11 +1,105 @@
-body {
-    background-color: #fff;
-}
+    * {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    .upper-part {
+        background-color: white;
+        width: 100vw;
+        height: 45vh;
+        color: #293577;
+    }
+    #petbook-logo{
+        width: 1px;
+        height: 1px;
+    }
+    #editing-button{
+        margin-top: 75px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: ivory 7px solid;
+    }
+    #profile-image {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 2px dashed #293577;
+    }
+   #image-button, #image-button-add{
+    width: 90px;
+    height: 90px;
+    border-radius: 20%;
+    
+   }
+ #image-button-add-profile{
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     padding: -200px;
+ }
+    
+  
+    .lower-part {
+        background-color: #293577;
+        width: 100vw;
+        height: 55vh;
+        color: ivory;
+    }
+    
+    #criar-perfil,
+    #saving-button {
+        background-color: #293577;
+        border: 2px solid #293577;
+    }
 
-header,
-#footer,
-a,
-#exit-button {
-    background-color: #3f51b5;
-    color: #ebebeb;
-}
+    @media (min-width: 700px ){
+        main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #petbook-logo{
+            width: 400px;
+            height: 150px;
+            margin-left: 30px;
+        }
+        .upper-part {
+            background-color: #293577;
+            width: 40vw;
+            height: 100vh;
+            color: white;
+
+        }
+        .lower-part {
+            background-color: white;
+            width: 60vw;
+            height: 100vh;
+            color: #293577;
+            margin-top: 80px;
+        }
+        
+           
+        #editing-button{
+            margin-top: 200px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: #293577 7px solid;
+        }
+        #profile-image {
+            margin-top: 50px;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            border: 2px dashed #293577;
+        }
+        #image-button, #image-button-add{
+            width: 130px;
+            height: 130px;
+            border-radius: 20%;
+            
+           }
+    }

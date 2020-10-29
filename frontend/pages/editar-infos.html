@@ -1,78 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt_BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/icons/pata.ico" />
     <title>PetBook | Editando informações</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/editar-infos.css">
 </head>
 
 <body>
 
-    <header class="intro-petbook d-flex mx-auto">
-        <div class="container d-flex text-center">
-        </div>
-    </header>
-
-    <main class="container-fluid d-flex justify-content-center">
 
 
-
-
-        <button type="submit" id="exit-button" class="btn-lg my-2 btn-primary fixed-bottom border-0 position-relative float-right">Sair</button> <br>
-
-
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer">
-
-        <nav class="navbar navbar-expand-lg fixed-bottom navbar-dark" id="footer">
-            <a class="navbar-brand" href="#">© 2020 PetBook</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-            <div class="collapse navbar-collapse offset-md-4 offset-lg-5 offsetxl-6" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Ajuda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Termos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Localizações</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Idiomas
-                                </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Português</a>
-                            <a class="dropdown-item" href="#">English</a>
-                            <a class="dropdown-item" href="#">Español</a>
-                        </div>
-                    </li>
+    <main>
+        <section class="upper-part">
+            <div class="top-header text-center align-center">
+                <h2 class="h2 pt-1">Minhas informações</h2>
+                <hr class="line">
+                <button type="button" class="btn btn-link position-fixed" data-toggle="modal"
+                    data-target="#exampleModalEditing"><img src="../assets/editingPen.png" id="editing-button"
+                        alt="caneta de edição"></button>
             </div>
-        </nav>
+            <div class="image-place text-center">
+                <img src="../assets/carousel-item2.jpg" id="profile-image" alt="user profile image">
+            </div>
+
+            <div class="information text-center">
+                <h5>Nome completo do usuário</h5>
+                <p>99 anos</p>
+            </div>
+        </section>
+        <div class="lower-part text-center">
+            <img src="../assets/petbookLogo.png" id="petbook-logo" alt="petbook logotipo">
+            <div class="top-header text-center">
+                <h4 class="h4 mt-3">Selecione o Perfil</h4>
+            </div>
+            <div class="profiles text-center">
+                <div class="options-profiles mt-3 d-flex justify-content-around align-items-center">
+                    <div class="my-profiles">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            <img src="../assets/carousel-item3.jpg" id="image-button" alt="imagem de um perfil">
+                        </button>
+                    </div>
+                    <div class="my-profiles">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            <img src="../assets/carousel-item1.jpg" id="image-button" alt="imagem de um perfil">
+                        </button>
+                    </div>
+
+                    <div class="adding-a-new-one">
+                        <button type="button" class="btn btn-link" data-toggle="modal"
+                            data-target="#exampleModalAdding">
+                            <img src="../assets/plusButton.png" id="image-button-add" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" id="button-sair" class="btn btn-outline-light btn-lg mt-5">&#8688;  Sair</button>
+        </div>
+
+        <!-- Modal changing user's information-->
+        <div class="modal fade" id="exampleModalEditing" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Alterando minhas informações</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Formulario a ser alterado-->
+                        <form>
+                            <div class="image-place text-center">
+                                <img src="../assets/carousel-item2.jpg" id="image-button" alt="user profile image">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputName1"
+                                    placeholder="Nome completo do usuário" aria-describedby="nameHelp">
+                                <small id="nameHelp" class="form-text text-muted">Nome</small>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col">
+                                    <label for="exampleInputName1"></label>
+                                    <input type="text" class="form-control" id="exampleInputRaça1" placeholder="Brasil"
+                                        aria-describedby="raçaHelp">
+                                    <small id="raçaHelp" class="form-text text-muted">Pais</small>
+                                </div>
+                                <div class="form-group col">
+                                    <label for="exampleInputName1"></label>
+                                    <input type="date" class="form-control" id="exampleInputAniversario1"
+                                        aria-describedby="aniversarioHelp">
+                                    <small id="aniversarioHelp" class="form-text text-muted">Aniversário</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1"></label>
+                                <input disabled type="email" class="form-control" id="exampleInputName1"
+                                    placeholder="nomecompleto@gmail.com" aria-describedby="nameHelp">
+                                <small id="emailHelp" class="form-text text-muted">Email</small>
+                            </div>
 
 
-    </footer>
+
+                            <button type="submit" id="criar-perfil" class="btn btn-primary float-right">Salvar
+                                Alterações</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+        <!-- Modal Adding new Profile-->
+        <div class="modal fade" id="exampleModalAdding" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Adicionando novo perfil</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!--Formulario de criação de novo perfil-->
+                        <form>
+                            <div class="image-place text-center">
+                                <img src="../assets/profileImage.png" id="image-button" alt="user profile image">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputType1"
+                                    placeholder="Ex: cachorro, gato, papagaio etc..." aria-describedby="typeHelp">
+                                <small id="typeHelp" class="form-text text-muted">Tipo de Pet</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Nome"
+                                    aria-describedby="nameHelp">
+                                <small id="nameHelp" class="form-text text-muted">Nome do Pet</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputRaça1"
+                                    placeholder="Ex: pitbull, york shire, vira-lata etc..." aria-describedby="raçaHelp">
+                                <small id="raçaHelp" class="form-text text-muted">Raça</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="date" class="form-control" id="exampleInputAniversario1"
+                                    aria-describedby="aniversarioHelp">
+                                <small id="aniversarioHelp" class="form-text text-muted">Aniversário</small>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Castrado?</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option value="Sim">Sim</option>
+                                    <option selected value="Não">Não</option>
+                                </select>
+                            </div>
+
+
+                            <button type="submit" id="criar-perfil" class="btn btn-primary float-right">Criar
+                                Perfil</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer id="footer ">
+
+
+        </footer>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo "
+            crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
+            crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
+            crossorigin="anonymous "></script>
+        <script src="script.js "></script>
 </body>
+
+</html>
 
 </html>
