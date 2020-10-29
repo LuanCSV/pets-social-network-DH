@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petbook | Criar perfil de pet</title>
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="../styles/pages/login.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/pages/criar-pet.css">
 
 </head>
+
 <body>
-  
+
   <header>
     <h1>Crie o primeiro perfil para seu pet</h1>
   </header>
 
-  <main>
-    
+  
+
+  <main class="container">
+    <hr>
+    <form>
+      <p class="text-center"> Selecione uma foto para o seu pet </p>
+      <div class="header-infos">
+        <img 
+          style="border: 2px solid black;" 
+          src="../assets/pet_default.png" 
+          width="100" height="100"
+          alt="Foto do animal de estimacao">
+        <label for="foto-pet-input">
+          <span> + </span>
+        </label>
+
+        <input type="file" name="foto-pet" id="foto-pet-input">
+      </div>
+
+      <hr>
+
+      <div class="form-group">
+        <label for="nome">Nome</label> <br>
+        <input type="text" class="form-control inputLayout" id="nome">
+      </div>
+      <div class="form-group">
+        <label for="">Tipo do pet</label> <br>
+        <input type="text" class="form-control inputLayout" placeholder="Cachorro, gato...">
+      </div>
+      <div class="form-group">
+        <label for="">Raça</label> <br>
+        <input type="text" class="form-control inputLayout" placeholder="Labrador, Poodle...">
+      </div>
+      <div class="form-group">
+        <label for="">Data de nascimento</label> <br>
+        <input type="date" class="form-control inputLayout">
+      </div>
+
+      <button type="submit" class="botaoLayout"> Próximo </button>
+    </form>
   </main>
 
-  <footer>
 
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  </script>
 
 </body>
+
 </html>
