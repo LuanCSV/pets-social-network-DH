@@ -8,10 +8,15 @@
     .upper-part {
         background-color: white;
         width: 100vw;
-        height: 40vh;
+        height: 45vh;
         color: #293577;
     }
-    
+    #editing-button{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: ivory 7px solid;
+    }
     #profile-image {
         width: 130px;
         height: 130px;
@@ -38,7 +43,7 @@
     .lower-part {
         background-color: #293577;
         width: 100vw;
-        height: 60vh;
+        height: 55vh;
         color: ivory;
     }
     

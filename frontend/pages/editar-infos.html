@@ -19,9 +19,10 @@
             <div class="top-header text-center align-center">
                 <h2 class="h2 mt-2">Minhas informações</h2>
                 <hr class="line">
+                <button type="button" class="btn btn-link position-fixed" data-toggle="modal" data-target="#exampleModalEditing"><img src="../assets/editingPen.png" id="editing-button" alt="caneta de edição"></button>  
             </div>
             <div class="image-place text-center">
-                <img src="../assets/carousel-item1.jpg" id="profile-image" alt="user profile image">
+                <img src="../assets/carousel-item2.jpg" id="profile-image" alt="user profile image">
             </div>
 
             <div class="information text-center">
@@ -54,183 +55,67 @@
                 </div>
             </div>
         </div>
-        <!-- Modal My-Profiles-->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       
+        <!-- Modal changing user's information-->
+        <div class="modal fade" id="exampleModalEditing" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Meus Perfis</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Alterando minhas informações</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
                     </div>
                     <div class="modal-body">
-                        <div class="accordion" id="accordionExample">
-                            <div class="card">
-                                <div class="card-header" id="headingOne">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Perfil #1 - Belinha
-                                  </button>
-                                    </h2>
-                                </div>
+                        <!--Formulario a ser alterado-->
+                        <form>
+                            <div class="image-place text-center">
+                                <img src="../assets/carousel-item2.jpg" id="image-button" alt="user profile image">
 
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-
-
-                                    <!--Primeiro opções perfil-->
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Marquito (pet) - Antonio da Silva (dono)" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="password" class="form-control" placeholder="(sua senha)" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="email" class="form-control" placeholder="antonio.dasilva@gmail.com" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Raça" aria-label="Recipient's user greed" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="País" aria-label="Recipient's user country" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Femea" aria-label="Recipient's user genre" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Fim Primeiro opções perfil-->
-                                </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header" id="headingTwo">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Perfil #2 - Rex
-                                  </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                                    <!--Segundo opções perfil-->
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Marquito (pet) - Antonio da Silva (dono)" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="password" class="form-control" placeholder="(sua senha)" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="email" class="form-control" placeholder="antonio.dasilva@gmail.com" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Raça" aria-label="Recipient's user greed" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="País" aria-label="Recipient's user country" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Macho" aria-label="Recipient's user genre" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Fim Segundo opções perfil-->
-                                </div>
+                             <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputName1" placeholder="Nome completo do usuário" aria-describedby="nameHelp">
+                                <small id="nameHelp" class="form-text text-muted">Nome</small>
                             </div>
-                            <div class="card">
-                                <div class="card-header" id="headingThree">
-                                    <h2 class="mb-0">
-                                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Perfil #3 - Meg
-                                  </button>
-                                    </h2>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                    <!--Terceiro opções perfil-->
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Marquito (pet) - Antonio da Silva (dono)" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="password" class="form-control" placeholder="(sua senha)" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="email" class="form-control" placeholder="antonio.dasilva@gmail.com" aria-label="Recipient's user password" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Raça" aria-label="Recipient's user greed" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="País" aria-label="Recipient's user country" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-                                    <div class="input-group mb-1">
-                                        <input type="text" class="form-control" placeholder="Femea" aria-label="Recipient's user genre" aria-describedby="button-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Editar</button>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Fim Terceiro opções perfil-->
-                                </div>
+                            <div class="row">
+                            <div class="form-group col">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputRaça1" placeholder="Brasil" aria-describedby="raçaHelp">
+                                <small id="raçaHelp" class="form-text text-muted">Pais</small>
+                            </div>
+                            <div class="form-group col">
+                                <label for="exampleInputName1"></label>
+                                <input type="date" class="form-control" id="exampleInputAniversario1" aria-describedby="aniversarioHelp">
+                                <small id="aniversarioHelp" class="form-text text-muted">Aniversário</small>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"></label>
+                            <input disabled type="email" class="form-control" id="exampleInputName1" placeholder="nomecompleto@gmail.com" aria-describedby="nameHelp">
+                            <small id="emailHelp" class="form-text text-muted">Email</small>
+                        </div>
+                           
+                            
+
+                            <button type="submit" id="criar-perfil" class="btn btn-primary float-right">Salvar Alterações</button>
+                        </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
-                        <button type="button" id="saving-button" class="btn btn-primary">Salvar</button>
-                    </div>
+
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         <!-- Modal Adding new Profile-->
         <div class="modal fade" id="exampleModalAdding" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
