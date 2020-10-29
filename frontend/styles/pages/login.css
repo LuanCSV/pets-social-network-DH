@@ -71,6 +71,12 @@ main{
     font-style: italic;
 }
 
+.mensagemErros{
+    margin-left: 10px;
+    font-style: italic;
+    color:crimson
+}
+
 
 .buttonLink{
     margin: 0px auto;
