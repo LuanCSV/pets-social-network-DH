@@ -42,7 +42,7 @@ let validapswd = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
 let psswd = document.getElementById('inputSenhaLogin').value
 let errorSenha = document.querySelector('#error-senha')
 if(!validapswd.test(psswd)){
-   errorSenha.innerHTML = "Senha invalida"
+   errorSenha.innerHTML = "Senha inválida"
 }
 
 }

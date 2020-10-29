@@ -22,7 +22,7 @@ function comparaEmail(){
     let emailCadastro = document.getElementById('inputEmailCadastro').value
     let erroEmail = document.getElementById('erro-email-cadastro')
     if(!filter.test(emailCadastro)){
-        erroEmail.innerHTML = 'Email invalído'
+        erroEmail.innerHTML = 'E-mail invalído'
     }
 }
 
