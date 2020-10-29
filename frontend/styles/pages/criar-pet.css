@@ -39,10 +39,11 @@ header h1{
 
 .header-infos .img-pet{
   border-radius: 50px;
-  border: 2px solid black;
-  
-  padding: 10px;
+  box-shadow:0 0 5px rgba(0,0,0,0.8);
   background-color: #EBEBEB;
+  background-position: center;
+  background-attachment: fixed;
+  object-fit: cover;
 }
 
 .header-infos label[for="foto-pet-input"]{
@@ -89,5 +90,5 @@ input[type="file"]{
 }
 
 .form-footer .botaoLayout{
-
+  font-weight: 600;
 }
