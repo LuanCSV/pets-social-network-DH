@@ -15,52 +15,56 @@
 
 <body>
 
-  <header>
-    <h1>Crie o primeiro perfil para seu pet</h1>
-  </header>
+  <div class="body">
 
-  
+    <header>
+      <h1>Crie o primeiro perfil para seu pet</h1>
+    </header>
 
-  <main class="container">
-    <hr>
-    <form>
-      <p class="text-center"> Selecione uma foto para o seu pet </p>
-      <div class="header-infos">
-        <img 
-          style="border: 2px solid black;" 
-          src="../assets/pet_default.png" 
-          width="100" height="100"
-          alt="Foto do animal de estimacao">
-        <label for="foto-pet-input">
-          <span> + </span>
-        </label>
-
-        <input type="file" name="foto-pet" id="foto-pet-input">
-      </div>
-
+    <main class="container">
       <hr>
+      <form>
+        <p class="text-center mb-0" 
+           style="font-weight: 600;"> Selecione uma foto para o seu pet 
+        </p>
 
-      <div class="form-group">
-        <label for="nome">Nome</label> <br>
-        <input type="text" class="form-control inputLayout" id="nome">
-      </div>
-      <div class="form-group">
-        <label for="">Tipo do pet</label> <br>
-        <input type="text" class="form-control inputLayout" placeholder="Cachorro, gato...">
-      </div>
-      <div class="form-group">
-        <label for="">Raça</label> <br>
-        <input type="text" class="form-control inputLayout" placeholder="Labrador, Poodle...">
-      </div>
-      <div class="form-group">
-        <label for="">Data de nascimento</label> <br>
-        <input type="date" class="form-control inputLayout">
-      </div>
+        <!-- Input para adicionar foto do pet -->
+        <div class="header-infos">
+          <img class="img-pet" src="../assets/pet_default.png" width="100" height="100"
+            alt="Foto do animal de estimacao">
+          <label for="foto-pet-input">
+            <span> + </span>
+          </label>
 
-      <button type="submit" class="botaoLayout"> Próximo </button>
-    </form>
-  </main>
+          <input type="file" name="foto-pet" id="foto-pet-input">
+        </div>
 
+        <hr>
+
+        <div class="form-group">
+          <label for="nome">Nome</label> <br>
+          <input type="text" class="form-control inputLayout" id="nome">
+        </div>
+        <div class="form-group">
+          <label for="">Tipo do pet</label> <br>
+          <input type="text" class="form-control inputLayout" placeholder="Cachorro, gato...">
+        </div>
+        <div class="form-group">
+          <label for="">Raça</label> <br>
+          <input type="text" class="form-control inputLayout" placeholder="Labrador, Poodle...">
+        </div>
+        <div class="form-group">
+          <label for="">Data de nascimento</label> <br>
+          <input type="date" class="form-control inputLayout">
+        </div>
+
+        <div class="form-footer">
+        <button type="submit" class="botaoLayout"> Próximo </button>
+        </div>
+      </form>
+    </main>
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
