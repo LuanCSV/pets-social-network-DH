@@ -1,0 +1,94 @@
+body{
+  /* background-color: white; */
+  background: linear-gradient(to bottom right, #4052b5, #1d2a72);
+  /* color: white; */
+  color: #242424;
+  min-height: 100vh;
+}
+
+.body{
+  padding: 20px;
+
+  background-color: white;
+  width: 95%;
+  max-width: 600px;
+  margin: auto;
+  min-height: 100vh;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+
+header h1{
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin: 0;
+
+  font-weight: 600;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* SELECAO FOTO */
+.header-infos{
+  width: fit-content;
+  padding: 7px;
+  margin: auto;
+  position: relative;
+}
+
+.header-infos .img-pet{
+  border-radius: 50px;
+  box-shadow:0 0 5px rgba(0,0,0,0.8);
+  background-color: #EBEBEB;
+  background-position: center;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+.header-infos label[for="foto-pet-input"]{
+  background-color: hsl(231, 48%, 48%);
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  border-radius: 50px;
+
+  color: white;
+  font-size: 30px;
+
+  font-weight: bolder;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right:0;
+
+  cursor: pointer;
+  transition: background-color ease-in-out 0.2s;
+}
+
+.header-infos label[for="foto-pet-input"]:hover{
+  background-color: #161f55;
+}
+
+input[type="file"]{
+  display: none;
+}
+
+.form-group label{
+  font-weight: 600;
+  margin: 0px 0px 0px 10px
+}
+
+.form-footer {
+  padding: 20px 0px 0px 0px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.form-footer .botaoLayout{
+  font-weight: 600;
+}
