@@ -20,30 +20,35 @@
                 <h2 class="h2 mt-2">Minhas informações</h2>
                 <hr class="line">
             </div>
-            <div class="image-place text-center mt-1">
+            <div class="image-place text-center">
                 <img src="../assets/carousel-item1.jpg" id="profile-image" alt="user profile image">
             </div>
 
-            <div class="information text-center mt-5">
+            <div class="information text-center">
                 <h5>Nome completo do usuário</h5>
                 <p>99 anos</p>
             </div>
         </section>
         <div class="lower-part">
             <div class="top-header text-center">
-                <h4 class="h4 mt-4">Selecione </h4>
+                <h4 class="h4 mt-5">Selecione o Perfil</h4>
             </div>
             <div class="profiles text-center">
-                <div class="options-profiles mt-4 d-flex justify-content-center align-items-center">
+                <div class="options-profiles mt-5 d-flex justify-content-around align-items-center">
                     <div class="my-profiles">
-                        <button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">
-                            Perfis
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            <img src="../assets/carousel-item3.jpg" id="image-button" alt="">
+                          </button>
+                    </div>
+                    <div class="my-profiles">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                            <img src="../assets/carousel-item1.jpg" id="image-button" alt="">
                           </button>
                     </div>
 
                     <div class="adding-a-new-one">
-                        <button type="button" class="btn " data-toggle="modal" data-target="#exampleModalAdding">
-                            Adicionar
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalAdding">
+                            <img src="../assets/plusButton.png" id="image-button-add" alt="">
                           </button>
                     </div>
                 </div>
@@ -239,30 +244,42 @@
                     <div class="modal-body">
                         <!--Formulario de criação de novo perfil-->
                         <form>
+                            <div class="image-place text-center">
+                                <img src="../assets/profileImage.png" id="image-button" alt="user profile image">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputType1" placeholder="Ex: cachorro, gato, papagaio etc..." aria-describedby="typeHelp">
+                                <small id="typeHelp" class="form-text text-muted">Tipo de Pet</small>
+                            </div>
                             <div class="form-group">
                                 <label for="exampleInputName1"></label>
                                 <input type="text" class="form-control" id="exampleInputName1" placeholder="Nome" aria-describedby="nameHelp">
                                 <small id="nameHelp" class="form-text text-muted">Nome do Pet</small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1"></label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
-                                <small id="emailHelp" class="form-text text-muted">exemplo: email@dominio.com.</small>
+                                <label for="exampleInputName1"></label>
+                                <input type="text" class="form-control" id="exampleInputRaça1" placeholder="Ex: pitbull, york shire, vira-lata etc..." aria-describedby="raçaHelp">
+                                <small id="raçaHelp" class="form-text text-muted">Raça</small>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1"></label>
-                                <input type="password" class="form-control" placeholder="Senha" id="exampleInputPassword1">
-                                <small id="passwordHelp" class="form-text text-muted"></small>
+                                <label for="exampleInputName1"></label>
+                                <input type="date" class="form-control" id="exampleInputAniversario1" aria-describedby="aniversarioHelp">
+                                <small id="aniversarioHelp" class="form-text text-muted">Aniversário</small>
                             </div>
-                            <div class="form-group">
-                                <label for="exampleInputPasswordConfirmation1"></label>
-                                <input type="password" class="form-control" placeholder="Confirme a senha" id="exampleInputPasswordConfirmation1">
-                                <small id="passwordHelp" class="form-text text-muted">A mesma senha digitada acima.</small>
-                            </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Aceito os Termos de Uso</label>
-                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text" for="inputGroupSelect01">Castrado?</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                  <option value="Sim">Sim</option>
+                                  <option selected value="Não">Não</option>
+                                </select>
+                              </div>
+                            
+
                             <button type="submit" id="criar-perfil" class="btn btn-primary float-right">Criar Perfil</button>
                         </form>
                     </div>
