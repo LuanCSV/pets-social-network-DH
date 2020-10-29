@@ -61,13 +61,14 @@
         <form>
           <div class="form-group">
             <label for="inputEmailLogin">Email</label>
-            <input type="email" class="form-control inputLayout" id="inputEmailLogin" aria-describedby="emailHelp" placeholder="">
-            <small id="exemplo-email" class="form-text text-muted">Exemplo: cachorro@email.com</small>
+            <input type="email" class="form-control inputLayout" id="inputEmailLogin" aria-describedby="emailHelp" placeholder="" onblur="validarEmail()" onfocus="redefinirMsg()">
+            <span id="error-email" class="mensagemErros"></span>
           </div>
           
           <div class="form-group">
             <label for="inputSenhaLogin">Senha</label>
-            <input type="password" class="form-control inputLayout" id="inputSenhaLogin" placeholder="">
+            <input type="password" class="form-control inputLayout" id="inputSenhaLogin" placeholder="" onblur="validarSenha()" onfocus="redefinirPsw()">
+            <span id="error-senha" class="mensagemErros"></span>
           </div>
           
           <div class="form-group text-center mb-0">
@@ -84,6 +85,8 @@
 
   </main>
   <!--final Tela Login -->
+  
+  <!--Modal Cadastro-->
 
   <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -102,17 +105,20 @@
 
           <div class="form-group">
             <label for="inputEmailCadastro">E-mail</label>
-            <input type="email" class="form-control inputLayout" id="inputEmailCadastro">
+            <input type="email" class="form-control inputLayout" id="inputEmailCadastro" onblur="comparaEmail()" onfocus="redefinirEmail()">
+            <span id="erro-email-cadastro" class="mensagemErros"></span>
           </div>
           
           <div class="form-group">
             <label for="inputSenhaCadastro">Senha</label>
             <input type="password" class="form-control inputLayout" id="inputSenhaCadastro">
+            <small>A senha deve conter 8 caracteres com letra maiúscula, minúscula e números.</small>
           </div>
 
           <div class="form-group">
             <label for="inputConfirmSenha">Confirme sua senha</label>
-            <input type="password" class="form-control inputLayout" id="inputConfirmSenha">
+            <input type="password" class="form-control inputLayout" id="inputConfirmSenha" onblur="comparaSenha()" onfocus="redefinirConfirm()">
+            <span class="mensagemErros" id="erro-confirm-senha"></span>
           </div>
 
           <div class="custom-control custom-checkbox text-center">
@@ -208,6 +214,7 @@
     crossorigin="anonymous"></script>
     
   <script src="../script/login.js"></script>
+  <script src="../script/criar-conta.js"></script>
 
      
 

@@ -110,3 +110,13 @@ button{
     height: calc(2.25rem + 2px);
 }
 
+.inputLayout:invalid {
+    text-align: center;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: white;
+    border: 1px solid var(--button-close-color);
+    border-radius: 50px;
+    height: calc(2.25rem + 2px);
+}
+
