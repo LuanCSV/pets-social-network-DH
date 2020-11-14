@@ -1,0 +1,124 @@
+:root{
+  --button-primary-color:  #FF4081;
+  --button-primary-hover:  #b82d5b;;
+
+  --button-secondary-color: #48A7FE;
+  --button-secondary-hover: #236db3;
+
+  --button-close-color: #f44336;
+  --button-close-hover: #bb0d01;
+
+  --input-bg-color: #EBEBEB;
+  --transparent-color: #ffffff00;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+/* Usar nos botoes do site */
+.botaoLayout{
+  padding: 20px;
+  border-radius: 50px;
+  width: 175px;
+  border: none;
+  
+  background-color: var(--button-primary-color);
+  color: white;
+  font-size: 16px;
+  letter-spacing: 4px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.botaoLayout:hover{
+  background-color: var(--button-primary-hover);
+  color: #ffffff;
+}
+
+/* Botao secundario */
+.botaoSecondary{
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  
+  background-color: var(--button-secondary-color);
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.botaoSecondary:hover{
+  background-color: var(--button-secondary-hover);
+}
+
+/* Botao para fechar */
+.botaoClose{
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  
+  background-color: #f44336;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.botaoClose:hover{
+  background-color: #bb0d01;
+}
+/* Usar nos links do site */
+.botaoLink{
+  border: none;
+  background-color: var(--transparent-color);
+  color:var(--button-secondary-color);
+  font-weight: 600;
+
+  transition: color ease-in-out 0.3s;
+}
+
+.botaoLink:hover{
+  color: var(--button-secondary-hover);
+}
+
+/* Inputs caixas de texto */
+
+.inputLayout {
+  text-align: center;
+  width: 100%;
+  padding: 25px 10px;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-bg-color);
+  border-radius: 50px;
+  height: calc(2.25rem + 2px);
+}
+
+.inputLayout:invalid {
+  text-align: center;
+  width: 100%;
+  padding: 25px 10px;
+  background-color: white;
+  border: 1px solid var(--button-close-color);
+  border-radius: 50px;
+  height: calc(2.25rem + 2px);
+}
+
+
+
