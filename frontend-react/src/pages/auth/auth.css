@@ -1,0 +1,9 @@
+.headerAuth{
+    max-width: 100vw;
+    height: 100px;
+
+    background: linear-gradient(to bottom right, #4052b5, #161f55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

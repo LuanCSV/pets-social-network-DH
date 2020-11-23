@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+
+import AuthPage from './pages/auth/auth';
 import WelcomePage from './pages/welcome/welcome';
 
 const Routes = () => (
-  <BrowserRouter>
+  <Router>
 
     <Switch>
       <Route
@@ -11,9 +13,16 @@ const Routes = () => (
         path="/"
         component={WelcomePage}
       />
+      <Route
+        exact
+        path="/auth"
+        component={AuthPage}
+      />
+
+      <Redirect to="/" />
     </Switch>
 
-  </BrowserRouter>
+  </Router>
 )
 
 export default Routes;
