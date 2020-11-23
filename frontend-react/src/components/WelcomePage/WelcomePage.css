@@ -30,17 +30,10 @@
 }
 
 .mainSection .header h1{
-  font-size: 45px;
   margin-bottom: 10px;
-  font-weight: 500;
+
 }
 
-.mainSection .header img{
-  margin: 0px 5px;
-
-  width: 45px;
-  height: 45px;
-}
 
 .mainSection .header p{
   margin-left: 10px;  
