@@ -22,11 +22,20 @@
     }
 }
 .authComponent{
+    position: relative;
     width: 100%;
     max-width: 550px;
     margin: 0px auto;
     padding: 0 20px;
 }
+
+.authComponent .toggleBotao{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+}
+
 .authComponent h2{
     margin-bottom: 20px;
 }
@@ -41,7 +50,7 @@
     flex-wrap: wrap;
 }
 
-.footerLogin a{
+.footerLogin span{
     width: 25%;
     padding: 10px 20px;
     
@@ -51,7 +60,7 @@
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
-.footerLogin a:hover{
+.footerLogin span:hover{
     background-color: #f4f4f4;
 }
 

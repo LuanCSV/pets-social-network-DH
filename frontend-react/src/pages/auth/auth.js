@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import CarouselLogin from '../../components/AuthComponents/CarouselLogin';
 import FormLogin from '../../components/AuthComponents/FormLogin';
@@ -8,6 +8,13 @@ import Logo from '../../shared/Logo/Logo';
 import './auth.css';
 
 const AuthPage = () => {
+
+    const [isLogin, setIsLogin] = useState(false);
+
+    const toggleComponent = () => {
+        setIsLogin(!isLogin);
+    }
+
     return (
         <>
             <header className="headerAuth">
@@ -19,18 +26,22 @@ const AuthPage = () => {
                 <CarouselLogin />
 
                 <div className="authComponent">
-                    <h2>Login</h2>
-                    {/* <FormLogin/> */}
-                    <FormRegister />
+                    <button  className="toggleBotao botaoSecondary" onClick={toggleComponent}>
+                        {!isLogin? `Acesse ja` : `Criar conta`}
+                    </button>
+
+                    {isLogin? <h2>Conecte-se</h2> : <h2>Crie sua conta</h2>}
+                    {isLogin? <FormLogin/> : <FormRegister />}
+                    
                 </div>
             </main>
 
             <footer className="footerLogin">
                 <ul>
-                    <a>Sobre</a>
-                    <a>Ajuda</a>
-                    <a>Termos</a>
-                    <a>Contato</a>
+                    <span>Sobre</span>
+                    <span>Ajuda</span>
+                    <span>Termos</span>
+                    <span>Contato</span>
                     <div class="footerCopyright">
                         <small>© 2020 PetBook</small>
                     </div>

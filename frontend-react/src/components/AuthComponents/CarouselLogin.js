@@ -12,6 +12,7 @@ const CarouselLogin = () => {
     accessibility: true,
     adaptativeHeight: false,
     arrows: false,
+    fade: true,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
