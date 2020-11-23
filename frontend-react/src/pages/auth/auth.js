@@ -2,6 +2,7 @@ import React from 'react';
 
 import CarouselLogin from '../../components/AuthComponents/CarouselLogin';
 import FormLogin from '../../components/AuthComponents/FormLogin';
+import FormRegister from '../../components/AuthComponents/FormRegister';
 import Logo from '../../shared/Logo/Logo';
 
 import './auth.css';
@@ -9,27 +10,30 @@ import './auth.css';
 const AuthPage = () => {
     return (
         <>
-            <header className="headerAuth"> 
-                <Logo size={'30'}/> 
+            <header className="headerAuth">
+                <Logo size={'30'} />
             </header>
 
             <main className="mainLogin">
 
-                <CarouselLogin/>
+                <CarouselLogin />
 
                 <div className="authComponent">
                     <h2>Login</h2>
-                    <FormLogin/>
+                    {/* <FormLogin/> */}
+                    <FormRegister />
                 </div>
             </main>
 
             <footer className="footerLogin">
                 <ul>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
+                    <a>Sobre</a>
+                    <a>Ajuda</a>
+                    <a>Termos</a>
+                    <a>Contato</a>
+                    <div class="footerCopyright">
+                        <small>© 2020 PetBook</small>
+                    </div>
                 </ul>
             </footer>
         </>

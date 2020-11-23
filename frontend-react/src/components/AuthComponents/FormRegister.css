@@ -1,15 +1,22 @@
-.actionLogin{
+.actionRegister{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
 }
 
-.formLogin .botaoLayout{
+.actionRegister .checkboxSpan {
+    margin: 5px 0px 15px 0px;
+}
+.actionRegister .checkboxSpan .checkboxInput {
+    margin: 0px 5px;
+}
+
+.formRegister .botaoLayout{
     width: 100%;
     margin: 0px
 }
-.formLogin hr{
+.formRegister hr{
     margin-bottom: 10px;
     width: 90%;
     border: 1px solid rgba(0, 0, 0, 0.1);

@@ -11,6 +11,7 @@ const Input = (props) => {
                 className="inputLayout" 
                 id={props.id} 
                 type={props.type} 
+                value={props.value}
                 required
             />
             <small>{props.errorMsg}</small>

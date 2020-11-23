@@ -1,7 +1,7 @@
 .headerAuth{
     max-width: 100vw;
     height: 100px;
-
+    max-height: 100px;
     background: linear-gradient(to bottom right, #4052b5, #161f55);
     display: flex;
     justify-content: center;
@@ -9,8 +9,8 @@
 }
 
 .mainLogin{
-    padding: 20px 0;
-    min-height: calc(100vh - 200px);
+    margin: 20px 0;
+    min-height: calc(100vh - 240px);
     display: flex;
 }
 
@@ -24,14 +24,44 @@
 .authComponent{
     width: 100%;
     max-width: 550px;
-    height: 500px;
     margin: 0px auto;
-    padding: 0px 20px;
+    padding: 0 20px;
+}
+.authComponent h2{
+    margin-bottom: 20px;
 }
 
 .footerLogin{
-    
-    height: 100px;
     max-height: 100px;
-    background-color: salmon;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footerLogin a{
+    width: 25%;
+    padding: 10px 20px;
+    
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+.footerLogin a:hover{
+    background-color: #f4f4f4;
+}
+
+.footerCopyright {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin:  20px 0;
+}
+
+.footerCopyright small{
+    letter-spacing: 2px;
 }
