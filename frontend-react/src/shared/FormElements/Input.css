@@ -1,0 +1,44 @@
+.form-group{
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 25px auto;
+}
+
+.form-group .inputLayout {
+    text-align: center;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 50px;
+    height: calc(2.25rem + 2px);
+
+    outline: none;
+}
+
+.form-group .inputLayout:invalid {
+    text-align: center;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: white;
+    border: 1px solid #f44336;
+    border-radius: 50px;
+    height: calc(2.25rem + 2px);
+}
+
+.form-group label{
+    margin-left: 17px;
+    margin-bottom: 5px;
+
+    font-weight: 600;
+}
+
+.form-group small {
+    color: #f44336;
+    margin-top: 5px;
+    margin-left: 17px;
+    font-style: italic;
+    font-weight: 600;
+}

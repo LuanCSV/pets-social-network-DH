@@ -1,0 +1,35 @@
+.carouselLogin {
+    display: none;
+    height: fit-content;
+    width: auto;
+    margin: 0px auto;
+}
+
+.carousel-item {
+    border-radius: 20px;
+    max-width: 100%;
+    border: none;
+    outline: none;
+}
+
+.carousel-item .img-carousel{
+    border-radius: 20px;
+    margin: auto;
+
+    /* max-height: 580px;
+    max-width: 600px; */
+}
+
+@media only screen and (min-width: 768px) {
+    .carouselLogin{
+        display: block;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .img-carousel{
+        width: 85%;
+        max-height: 780px;
+    }
+}

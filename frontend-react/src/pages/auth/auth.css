@@ -7,3 +7,31 @@
     justify-content: center;
     align-items: center;
 }
+
+.mainLogin{
+    padding: 20px 0;
+    min-height: calc(100vh - 200px);
+    display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+    .authComponent{
+        display: block;
+        max-width: 40%;
+        margin: 0 30px;
+    }
+}
+.authComponent{
+    width: 100%;
+    max-width: 550px;
+    height: 500px;
+    margin: 0px auto;
+    padding: 0px 20px;
+}
+
+.footerLogin{
+    
+    height: 100px;
+    max-height: 100px;
+    background-color: salmon;
+}

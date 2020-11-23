@@ -1,0 +1,19 @@
+[
+    {
+        "id": 0,
+        "alt": "",
+        "imgSrc": "https://images.pexels.com/photos/374825/pexels-photo-374825.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "id": 1,
+        "imgSrc": "https://images.pexels.com/photos/688885/pexels-photo-688885.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "id": 2,
+        "imgSrc": "https://images.pexels.com/photos/321900/pexels-photo-321900.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    },
+    {
+        "id": 3,
+        "imgSrc": "https://images.pexels.com/photos/1461876/pexels-photo-1461876.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+    }
+]
