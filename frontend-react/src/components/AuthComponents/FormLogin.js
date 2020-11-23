@@ -26,7 +26,7 @@ const FormLogin = () => {
                 <button className="botaoLink">Esqueceu a senha?</button> <br/>
                 <button type="submit" className="botaoLayout">Entrar</button> <br/>
                 <hr/>
-                <button className="botaoLink">Ainda nao tem uma conta?</button>
+                {/* <button className="botaoLink">Ainda nao tem uma conta?</button> */}
             </div>
         </form>
     )

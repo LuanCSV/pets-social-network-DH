@@ -42,7 +42,7 @@ const FormRegister = () => {
                 </span>
                 <button type="submit" className="botaoLayout">Criar conta</button> <br />
                 <hr />
-                <button className="botaoLink">Ja tem uma conta?</button>
+                {/* <button className="botaoLink">Ja tem uma conta?</button> */}
             </div>
         </form>
     )
