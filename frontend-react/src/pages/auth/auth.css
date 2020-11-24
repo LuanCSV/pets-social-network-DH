@@ -31,13 +31,16 @@
 
 .authComponent .toggleBotao{
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 0;
     width: 150px;
 }
 
 .authComponent h2{
+    margin-top: 5px;
     margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #242424;
 }
 
 .footerLogin{

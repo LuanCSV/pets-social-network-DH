@@ -20,7 +20,7 @@
     max-width: 600px; */
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
     .carouselLogin{
         display: block;
         width: 50%;

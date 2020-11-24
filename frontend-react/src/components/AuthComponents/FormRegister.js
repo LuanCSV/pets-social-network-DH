@@ -14,7 +14,7 @@ const FormRegister = () => {
         <form onSubmit={registerSubmitHandler} className="formRegister">
             <Input
                 type="text"
-                label="Nome"
+                label="Nome completo"
                 errorMsg="Insira seu nome"
             />
             <Input
