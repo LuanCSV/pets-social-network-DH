@@ -48,6 +48,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 1rem;
 }
 
 .footerLogin span{

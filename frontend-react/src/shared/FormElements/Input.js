@@ -8,7 +8,7 @@ const Input = (props) => {
         <div className="form-group">
             <label htmlFor={props.id}>{props.label}</label>
             <input 
-                className="inputLayout" 
+                className="inputLayout card" 
                 id={props.id} 
                 type={props.type} 
                 value={props.value}

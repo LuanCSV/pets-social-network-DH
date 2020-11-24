@@ -40,7 +40,7 @@ const FormRegister = () => {
                         Concordo com os <button className="botaoLink">Termos de Uso</button>
                     </label>
                 </span>
-                <button type="submit" className="botaoLayout">Criar conta</button> <br />
+                <button type="submit" className="card botaoLayout">Criar conta</button> <br />
                 <hr />
                 {/* <button className="botaoLink">Ja tem uma conta?</button> */}
             </div>

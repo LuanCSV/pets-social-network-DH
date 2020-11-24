@@ -28,7 +28,7 @@ const CarouselLogin = () => {
       { slides.map((item, index) => {
         return (
           <div key={index} class="carousel-item">
-            <img class="img-carousel"
+            <img class="img-carousel card"
               src={item.imgSrc}
               alt={item.alt} />
           </div>

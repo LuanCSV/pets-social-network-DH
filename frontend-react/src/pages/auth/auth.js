@@ -17,8 +17,8 @@ const AuthPage = () => {
 
     return (
         <>
-            <header className="headerAuth">
-                <Logo size={'30'} />
+            <header className="headerAuth card">
+                <Logo size='30' />
             </header>
 
             <main className="mainLogin">
@@ -26,7 +26,7 @@ const AuthPage = () => {
                 <CarouselLogin />
 
                 <div className="authComponent">
-                    <button  className="toggleBotao botaoSecondary" onClick={toggleComponent}>
+                    <button  className="toggleBotao botaoSecondary card" onClick={toggleComponent}>
                         {!isLogin? `Acesse ja` : `Criar conta`}
                     </button>
 
@@ -36,7 +36,7 @@ const AuthPage = () => {
                 </div>
             </main>
 
-            <footer className="footerLogin">
+            <footer className="footerLogin card">
                 <ul>
                     <span>Sobre</span>
                     <span>Ajuda</span>
