@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Input from '../../shared/FormElements/Input';
 
 import './FormRegister.css';
@@ -81,6 +81,8 @@ const FormRegister = () => {
         let lastInputsValues = formRegisterState,
             { name: inputName, value: inputValue } = e.target;
 
+
+
         if (inputValue.length > 0) {
             lastInputsValues[inputName] = inputValue;
             setFormRegisterState(lastInputsValues);
@@ -94,11 +96,11 @@ const FormRegister = () => {
 
         // Seta as validacoes de cada input no objeto original
         setvalidInputState({
-                Nome: inputsValidated["Nome"],
-                Email: inputsValidated["Email"],
-                Senha: inputsValidated["Senha"],
-                ConfirmSenha: inputsValidated["ConfirmSenha"]
-            }
+            Nome: inputsValidated["Nome"],
+            Email: inputsValidated["Email"],
+            Senha: inputsValidated["Senha"],
+            ConfirmSenha: inputsValidated["ConfirmSenha"]
+        }
         )
 
     }
