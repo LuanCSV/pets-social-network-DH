@@ -47,7 +47,7 @@ const FormRegister = () => {
     // Validacao dos inputs
     const validation = (name, value, formValue) => {
         let lastInputValid = validInputState;
-        let filterEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/;
+        let filterEmail = /^([a-zA-Z0-9_\-.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/;
         switch (name) {
             case "Nome":
                 value.length <= 0 ?
@@ -77,8 +77,6 @@ const FormRegister = () => {
     const inputHandlerUpdate = (e) => {
         let lastInputsValues = formRegisterState,
             { name: inputName, value: inputValue } = e.target;
-
-
 
         if (inputValue.length > 0) {
             lastInputsValues[inputName] = inputValue;
