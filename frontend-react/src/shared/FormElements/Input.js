@@ -4,17 +4,27 @@ import './Input.css';
 
 const Input = (props) => {
 
+    // const [inputStateValid, setInputStateValid] = useState(false);
+
+    const {name, label, type, onBlurValue, errorMsg, required, valid} = props;
+
+    // const changeHandler = (event) => {
+    //     !event.target.value? setInputStateValid(true) : setInputStateValid(false);
+    // }
+
     return (
         <div className="form-group">
-            <label htmlFor={props.id}>{props.label}</label>
-            <input 
-                className="inputLayout card" 
-                id={props.id} 
-                type={props.type} 
-                value={props.value}
-                required
+            <label htmlFor={name}>{label}</label> 
+            <input
+                name={name}
+                className={`inputLayout card ${!valid ? "inputLayout-invalid" : ""}`}
+                id={name}
+                type={type}
+                onBlur={onBlurValue}
+                required={required}
             />
-            <small>{props.errorMsg}</small>
+            {!valid?  <small>{errorMsg}</small> : null}
+            
         </div>
     )
 }

@@ -18,7 +18,7 @@
     outline: none;
 }
 
-.form-group .inputLayout:invalid {
+.form-group .inputLayout-invalid {
     text-align: center;
     width: 100%;
     background-color: white;
