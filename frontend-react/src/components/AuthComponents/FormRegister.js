@@ -10,32 +10,28 @@ const FormRegister = () => {
             type: "text",
             label: "Nome completo",
             errorMsg: "Insira um nome",
-            required: true,
-            validator: true
+            required: true
         },
         {
             name: "Email",
             type: "email",
             label: "E-mail",
             errorMsg: "Insira um e-mail valido",
-            required: true,
-            validator: true
+            required: true
         },
         {
             name: "Senha",
             type: "password",
             label: "Senha",
             errorMsg: "Sua senha deve conter 8+ digitos",
-            required: true,
-            validator: true
+            required: true
         },
         {
             name: "ConfirmSenha",
             type: "password",
             label: "Confirmar Senha",
             errorMsg: "As senhas devem coincidir",
-            required: true,
-            validator: true
+            required: true
         }
     ];
 
@@ -51,13 +47,14 @@ const FormRegister = () => {
     // Validacao dos inputs
     const validation = (name, value, formValue) => {
         let lastInputValid = validInputState;
+        let filterEmail = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})$/;
         switch (name) {
             case "Nome":
                 value.length <= 0 ?
                     lastInputValid[name] = false : lastInputValid[name] = true;
                 break;
             case "Email":
-                value.length <= 0 ?
+                value.length <= 0 || !filterEmail.test(value) ?
                     lastInputValid[name] = false : lastInputValid[name] = true;
                 break;
             case "Senha":
