@@ -7,7 +7,7 @@ const userSchema = new Schema({
     email: { type: String, required: true, unique: true },
     senha: { type: String, required: true, minlength: 6 },
     foto: { type: String, required: true },
-    criadoEm: { type: Date, default: Date.now() },
+    criadoEm: { type: Date, default: Date.now(), required: true },
     local: { type: String },
     pets: [{ type: mongoose.Types.ObjectId, required: true, ref: 'Pet' }],
     seguindo: [{ type: String, required: true }],
