@@ -14,7 +14,6 @@ const UsersControllers = {
         }
         res.json(
             {
-                message: "Users",
                 // getter: adiciona o "id" como string para nos conseguirmos utiliza-lo
                 // ja que o _id eh apenas para o mongodb
                 users: users.map(user => user.toObject({ getters: true }))
@@ -33,7 +32,7 @@ const UsersControllers = {
         }
 
         if (existingUser) {
-            return res.json({ message: "Usuario ja existe" });
+            return res.json({ error: "Usuario ja existe" });
         }
 
         // cria o usuario q vai ser salvo no banco de dados
@@ -59,6 +58,34 @@ const UsersControllers = {
         }
 
         res.json({ user: createdUser })
+    },
+    login: async (req, res, next) => {
+        const { email, password } = req.body;
+
+        // procurando se usuario existe
+        let authenticatedUser;
+        try {
+            authenticatedUser = await User.findOne({ email: email });
+        } catch (err) {
+            return next(err);
+        }
+
+        if (!authenticatedUser) {
+            return res.json({ error: "Usuario nao existe" });
+        }
+
+        // antes de usar o hash na senha
+        if (authenticatedUser.password !== password) {
+            return res.json({ error: "Senha incorreta" });
+        }
+
+        // aqui vai vir a autenticacao
+
+        // response
+        res.json({
+            message: "Logged in! - Acessou!"
+        })
+
     }
 }
 
