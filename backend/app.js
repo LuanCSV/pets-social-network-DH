@@ -33,7 +33,7 @@ app.use('/users', usersRoutes);
 
 // "middleware" de erro
  app.use((req, res, next) => {
-    return res.json({ message: "Nao foi possivel achar a rota" });
+    res.json({ message: "Nao foi possivel achar a rota" });
 })
 
 // conexao com banco de dados

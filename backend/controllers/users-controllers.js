@@ -57,7 +57,7 @@ const UsersControllers = {
             return next();
         }
 
-        res.json({ user: createdUser })
+        res.json({ message: "Usuario criado com sucesso", user: createdUser })
     },
     login: async (req, res, next) => {
         const { email, password } = req.body;

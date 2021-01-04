@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Input from '../../shared/FormElements/Input';
 
 import './FormRegister.css';
@@ -101,11 +101,42 @@ const FormRegister = () => {
     }
 
     // Submit do Form
-    const registerSubmitHandler = (event) => {
-        event.preventDefault();
-        console.table(formRegisterState);
-        console.table(validInputState);
-    }
+    const registerSubmitHandler = useCallback(
+        async (event) => {
+            event.preventDefault();
+
+            let validValuesCopy = validInputState;
+            let valuesFormCopy = formRegisterState;
+
+            let isAllValid = Object.values(validValuesCopy).every(value => value === true);
+            if (!isAllValid) {
+                return alert("Verifique os campos e tente novamente.")
+            }
+
+            let body = JSON.stringify({
+                name: valuesFormCopy.Nome,
+                email: valuesFormCopy.Email,
+                password: valuesFormCopy.Senha,
+            });
+
+            try {
+
+
+                const response = await fetch(
+                    `http://localhost:5000/users/signup`,
+                    {
+                        method: 'POST',
+                        body: body,
+                        headers: { 'Content-Type': 'application/json' }
+                    }
+                );
+                const responseData = await response.json()
+                alert(responseData.error || responseData.message)
+            } catch (error) {
+                console.log(error);
+            }
+        }, [validInputState, formRegisterState]
+    )
 
     return (
         <form onSubmit={registerSubmitHandler} method="POST" className="formRegister">
