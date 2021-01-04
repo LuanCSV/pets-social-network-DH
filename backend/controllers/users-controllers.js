@@ -86,6 +86,25 @@ const UsersControllers = {
             message: "Logged in! - Acessou!"
         })
 
+    },
+    getUser: async (req, res, next) => {
+
+        const userId = req.params.id;
+
+        let user;
+        try {
+            user = await User.findById(userId, '-password');
+        } catch (error) {}
+
+        if (!user) {
+            return res.json({
+                error: "Nao foi possivel achar o usuario"
+            })
+        }
+
+        res.json({
+            data: user.toObject({ getters: true })
+        })
     }
 }
 
