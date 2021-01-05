@@ -1,8 +1,8 @@
 .headerAuth{
     max-width: 100vw;
-    height: 100px;
-    max-height: 100px;
-    background: linear-gradient(to bottom right, #4052b5, #161f55);
+    height: 80px;
+    max-height: 80px;
+    background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 
 .mainLogin{
     margin: 20px 0;
-    min-height: calc(100vh - 240px);
+    min-height: calc(100vh - 220px);
     display: flex;
 }
 

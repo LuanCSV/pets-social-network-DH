@@ -10,6 +10,9 @@
 
   --input-bg-color: #EBEBEB;
   --transparent-color: #ffffff00;
+
+  --bg-primary: #4052b5;
+  --bg-secondary: #161f55;
 }
 
 *{
