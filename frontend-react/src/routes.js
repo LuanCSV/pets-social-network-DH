@@ -8,7 +8,7 @@ import WelcomePage from './pages/welcome/Welcome';
 
 const Routes = () => {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
 
   let routes;
   if (isLogged) {
