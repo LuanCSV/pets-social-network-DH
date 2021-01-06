@@ -4,36 +4,77 @@
     max-width: 100vw;
     height: 70px;
     max-height: 70px;
-    background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary));
+    /* background: linear-gradient(to bottom right, var(--bg-primary), var(--bg-secondary)); */
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.mainHeader .currentPage {
+.mainHeader .currentPage{
     color: white;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
 }
 
-.mainHeader .imageUser {
-    height: 45px;
-    width: 45px;
-    background-color: var(--transparent-color);
+.mainHeader .navLinksGroup{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.mainHeader .navLinksGroup .navLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0px 10px;
+    height: 100%;
+    min-width: 80px;
+
+    transition: all ease-in-out 0.2s;
+
+    text-decoration: none;
+}
+
+.mainHeader .navLinksGroup .navLinks:hover{
+    background-color: var(--bg-secondary);
+}
+
+.mainHeader .userMenuBox .buttonUser {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--transparent-color);
     border: none;
+
+    color: white;
+    border-radius: 50px;
+
+    transition: all ease-in-out 0.2s;
 }
 
-.mainHeader .imageUser img {
+.mainHeader .userMenuBox .buttonUser.desktop {
+    width: auto;
+    max-width: 200px;
+    justify-content: space-between;
+}
+
+.mainHeader .userMenuBox .buttonUser:hover {
+    background-color: var(--bg-secondary);
+}
+
+.mainHeader .userMenuBox .buttonUser p {
+    font-weight: bold;
+}
+
+.mainHeader .userMenuBox .buttonUser img {
     height: 45px;
     width: 45px;
     border-radius: 50%;
     border: 3px solid var(--transparent-color);
 
+    padding: 1px;
     transition: border ease-in-out 0.3s;
-}
-
-.mainHeader .imageUser img:hover {
-    cursor: pointer;
-    border: 1px solid var(--transparent-color);
 }
