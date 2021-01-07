@@ -8,7 +8,7 @@ import "./SideNav.css"
 function SideNav(props) {
     return (
         <>
-            <Backdrop onClose={props.onClose}/>
+            <Backdrop onClose={props.onClose} />
 
             <div className="sideMenu card">
                 <div className="headerSideMenu">
