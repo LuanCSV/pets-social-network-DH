@@ -1,60 +1,63 @@
+import React, { useEffect, useState } from 'react';
+
+import Logo from '../../shared/Logo/Logo'
 
 import './MainNavigation.css'
-
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../../shared/Logo/Logo'
+import NavLinks from './NavLinks';
+import SideNav from './SideNav';
 
 const getWidthWindow = () => window.innerWidth;
 
 function MainNavigation() {
 
     const [windowWidth, setWindowWidth] = useState(getWidthWindow);
+    const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
+    const user = {
+        userName: "Luan Carlos Silva Vasconcelos",
+        userPhoto: "https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"
+    }
 
     useEffect(() => {
-        const handleWidth = () => setWindowWidth(getWidthWindow)
+        const handleWidth = () => {
+            setWindowWidth(getWidthWindow);
+            if (windowWidth < 768) {
+                setSideMenuIsOpen(false);
+            }
+        }
         window.addEventListener('resize', handleWidth);
         return () => window.removeEventListener('resize', handleWidth);
-    }, []);
+    }, [windowWidth]);
 
-    let menu;
+
+    let navFormat;
     if (windowWidth < 768) {
-        menu = (
+        // setSideMenuIsOpen(false);
+        navFormat = (
             <>
-                <Logo icon size="40" padding="0" />
+                <Logo icon size="35" padding="0" />
 
                 <div className="currentPage">
                     Pagina atual
                 </div>
 
                 <div className="userMenuBox">
-                    <button className="buttonUser">
-                        <img src="https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png" alt="" />
+                    <button className="buttonUser" onClick={() => setSideMenuIsOpen(true)}>
+                        <img src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="" />
                     </button>
                 </div>
             </>
         )
     } else {
-        menu = (
+        navFormat = (
             <>
                 <Logo size="25" padding="0" />
 
-                <div className="navLinksGroup">
-                    <Link to="/profile/123" className="navLinks">
-                        Admin
-                    </Link>
-                    <Link to="/admin" className="navLinks">
-                        Feed
-                    </Link>
-                    <Link to="/admin" className="navLinks">
-                        Explorar
-                    </Link>
-                </div>
+                <NavLinks admin />
 
                 <div className="userMenuBox">
                     <button className="buttonUser desktop">
-                        <p>Luan Carlos da Silva Vasconcelos</p>
-                        <img src="https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png" alt="" />
+                        <p>{user.userName}</p>
+                        <img src={user.userPhoto} alt="Foto do usuario logado" />
                     </button>
                 </div>
             </>
@@ -62,9 +65,16 @@ function MainNavigation() {
     }
 
     return (
-        <header className="mainHeader">
-            {menu}
-        </header>
+        <>
+            <header className="mainHeader card">
+                {navFormat}
+            </header>
+            {windowWidth < 768 && sideMenuIsOpen &&
+                <>
+                    <SideNav onClose={() => setSideMenuIsOpen(false)} userName={user.userName} userPhoto={user.userPhoto}/>
+                </>
+            }
+        </>
     )
 }
 
