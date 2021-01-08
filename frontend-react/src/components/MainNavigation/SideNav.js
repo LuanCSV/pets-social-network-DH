@@ -17,12 +17,12 @@ function SideNav(props) {
                 </div>
                 <hr />
 
-                <Logo size="25" padding="10" />
+                <Logo bold size="25" padding="20" />
 
 
                 <NavLinks mobile admin={true} />
 
-                <button className="botaoClose Logout">Logout</button>
+                <button onClick={props.logout} className="botaoClose Logout">Logout</button>
 
             </div>
         </>

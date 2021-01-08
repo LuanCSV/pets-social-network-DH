@@ -10,3 +10,7 @@
     letter-spacing: 4px;
     margin: 0px 5px;
 }
+
+.logo h1.bold{
+    font-weight: 600;
+}

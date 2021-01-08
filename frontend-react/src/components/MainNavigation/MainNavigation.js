@@ -12,6 +12,7 @@ function MainNavigation() {
 
     const [windowWidth, setWindowWidth] = useState(getWidthWindow);
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
+    const [menuIsOpen, setMenuIsOpen] = useState(false);
     const user = {
         userName: "Luan Carlos Silva Vasconcelos",
         userPhoto: "https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"
@@ -22,12 +23,15 @@ function MainNavigation() {
             setWindowWidth(getWidthWindow);
             if (windowWidth < 768) {
                 setSideMenuIsOpen(false);
+            } else {
+                setMenuIsOpen(false);
             }
+
         }
+
         window.addEventListener('resize', handleWidth);
         return () => window.removeEventListener('resize', handleWidth);
     }, [windowWidth]);
-
 
     let navFormat;
     if (windowWidth < 768) {
@@ -55,7 +59,7 @@ function MainNavigation() {
                 <NavLinks admin={user.userAdmin} />
 
                 <div className="userMenuBox">
-                    <button className="buttonUser desktop">
+                    <button onClick={() => setMenuIsOpen(!menuIsOpen)} className="buttonUser desktop">
                         <p>{user.userName}</p>
                         <img src={user.userPhoto} alt="Foto do usuario logado" />
                     </button>
@@ -70,10 +74,28 @@ function MainNavigation() {
                 {navFormat}
             </header>
             {windowWidth < 768 && sideMenuIsOpen &&
-                <>
-                    <SideNav onClose={() => setSideMenuIsOpen(false)} userName={user.userName} userPhoto={user.userPhoto}/>
-                </>
-            } 
+
+                <SideNav
+                    onClose={() => setSideMenuIsOpen(false)}
+                    userName={user.userName}
+                    userPhoto={user.userPhoto}
+                    logout={() => console.log("Deslogado")}
+                />
+
+            }
+            {windowWidth > 768 && menuIsOpen &&
+                <div className="menuDesktop">
+                    <div className="headerSideMenu">
+                        <img src={user.userPhoto} alt="Foto do usuario" />
+                        <p>{user.userName}</p>
+                    </div>
+                    <hr />
+                    <Logo bold size="17"></Logo>
+                    <button
+                        onClick={() => console.log("Deslogado")}
+                        className="botaoClose Logout">Logout</button>
+                </div>
+            }
         </>
     )
 }
