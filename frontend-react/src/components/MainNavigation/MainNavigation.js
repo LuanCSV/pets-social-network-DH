@@ -52,7 +52,7 @@ function MainNavigation() {
             <>
                 <Logo size="25" padding="0" />
 
-                <NavLinks admin />
+                <NavLinks admin={user.userAdmin} />
 
                 <div className="userMenuBox">
                     <button className="buttonUser desktop">
@@ -73,7 +73,7 @@ function MainNavigation() {
                 <>
                     <SideNav onClose={() => setSideMenuIsOpen(false)} userName={user.userName} userPhoto={user.userPhoto}/>
                 </>
-            }
+            } 
         </>
     )
 }

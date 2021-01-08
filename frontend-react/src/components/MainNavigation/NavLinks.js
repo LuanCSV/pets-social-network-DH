@@ -10,17 +10,17 @@ function NavLinks(props) {
             <Link to={props.userProfile ? `/profile/${props.userProfile}` : `/profile/not-found`} className="navLinks">
                 Meu Perfil
             </Link>
-            <Link to="/admin" className="navLinks">
+            <Link to="/feed" className="navLinks">
                 Feed
             </Link>
-            <Link to="/admin" className="navLinks">
+            <Link to="/explorar" className="navLinks">
                 Explorar
             </Link>
-            <Link to="/Termos de uso" className="navLinks">
+            <Link to="/termos-de-uso" className="navLinks">
                 Termos de uso
             </Link>
             {props.admin && 
-                <Link to="/profile/123" className="navLinks">
+                <Link to="/admin" className="navLinks">
                     Admin*
                 </Link>
             }

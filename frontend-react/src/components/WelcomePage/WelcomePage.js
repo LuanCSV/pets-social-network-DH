@@ -12,8 +12,8 @@ const WelcomeComponent = () => {
           <Logo size="45"/>
           <p>Uma rede social para <br /> o seu pet.</p>
         </div>
-        <div class="action">
-          <Link to="/auth"><button class="botaoLayout">Acesse</button></Link>
+        <div className="action">
+          <Link to="/auth"><button className="botaoLayout">Acesse</button></Link>
         </div>
       </main>
     </div>

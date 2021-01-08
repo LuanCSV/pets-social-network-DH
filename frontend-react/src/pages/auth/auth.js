@@ -42,7 +42,7 @@ const AuthPage = () => {
                     <span>Ajuda</span>
                     <span>Termos</span>
                     <span>Contato</span>
-                    <div class="footerCopyright">
+                    <div className="footerCopyright">
                         <small>© 2020 PetBook</small>
                     </div>
                 </ul>

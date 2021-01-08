@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import MainNavigation from './components/MainNavigation/MainNavigation';
+import Admin from './pages/admin/Admin';
 
 import AuthPage from './pages/auth/Auth';
 import ProfilePage from './pages/profile/Profile';
@@ -8,7 +9,8 @@ import WelcomePage from './pages/welcome/Welcome';
 
 const Routes = () => {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
+  const admin = true;
 
   let routes;
   if (isLogged) {
@@ -20,7 +22,14 @@ const Routes = () => {
           component={ProfilePage}
         />
 
-        <Redirect to="/admin" />
+        {admin &&
+          <Route
+            path="/admin"
+            component={Admin}
+        />}
+
+
+        <Redirect to="/nada" />
 
       </Switch>
     )

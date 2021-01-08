@@ -159,7 +159,7 @@ const FormRegister = () => {
 
             <div className="actionRegister">
                 <span className="checkboxSpan">
-                    <input type="checkbox" class="checkboxInput" id="checkboxTermos" required />
+                    <input type="checkbox" className="checkboxInput" id="checkboxTermos" required />
                     <label className="" htmlFor="checkboxTermos">
                         Concordo com os <button className="botaoLink">Termos de Uso</button>
                     </label>
