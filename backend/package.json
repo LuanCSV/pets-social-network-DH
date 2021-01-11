@@ -25,6 +25,7 @@
   "homepage": "https://github.com/LuanCSV/pets-social-network-DH#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.8"
   },
   "devDependencies": {

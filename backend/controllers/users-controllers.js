@@ -1,5 +1,8 @@
 
 const User = require('../models/user');
+const jwt = require('jsonwebtoken');
+
+const super_secret = "petbooksupersecret"
 
 
 const UsersControllers = {
@@ -80,11 +83,25 @@ const UsersControllers = {
         }
 
         // aqui vai vir a autenticacao
+        let token;
+        try {
+            token = jwt.sign(
+                { userId: authenticatedUser.id, email: authenticatedUser.email }
+                , super_secret,
+                { expiresIn: "1hr" }
+            )
+        } catch (err) {
+            console.log(err);
+            return res.json({ error: "Erro interno" });
+        }
 
         // response
         res.json({
-            message: "Logged in! - Acessou!"
-        })
+            message: "Logged in! - Acessou!",
+            userId: authenticatedUser.id,
+            email: authenticatedUser.email,
+            token: token
+        });
 
     },
     getUser: async (req, res, next) => {
@@ -94,7 +111,7 @@ const UsersControllers = {
         let user;
         try {
             user = await User.findById(userId, '-password');
-        } catch (error) {}
+        } catch (error) { }
 
         if (!user) {
             return res.json({
