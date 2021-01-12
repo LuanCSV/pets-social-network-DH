@@ -7,12 +7,27 @@ export const useAuth = () => {
     const [userId, setUserId] = useState(null);
     const [admin, setAdmin] = useState(null);
 
-    const login = () => {
+    const login = useCallback((userId, token, admin) => {
+        setUserId(userId);
+        setToken(token);
+        setAdmin(admin);
 
-    }
-    const logout = () => {
+        localStorage.setItem('userData',
+            JSON.stringify({
+                userId: userId,
+                token: token,
+                admin: admin
+            })
+        )
+    }, []);
 
-    }
+    const logout = useCallback(() => {
+        setToken(null);
+        setUserId(null);
+        setAdmin(null);
 
-    return {token, login, logout, userId, admin}
+        localStorage.removeItem('userData');
+    }, []);
+
+    return { token, login, logout, userId, admin }
 }
