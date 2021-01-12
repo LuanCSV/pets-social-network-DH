@@ -6,14 +6,15 @@ import Admin from './pages/admin/Admin';
 import AuthPage from './pages/auth/Auth';
 import ProfilePage from './pages/profile/Profile';
 import WelcomePage from './pages/welcome/Welcome';
+import { AuthContext } from './shared/context/AuthContext';
+import { useAuth } from './shared/hooks/auth-hook';
 
 const Routes = () => {
 
-  const [isLogged, setIsLogged] = useState(true);
-  const admin = true;
+  const { admin, login, logout, token, userId } = useAuth();
 
   let routes;
-  if (isLogged) {
+  if (token) {
     routes = (
       <Switch>
 
@@ -26,7 +27,7 @@ const Routes = () => {
           <Route
             path="/admin"
             component={Admin}
-        />}
+          />}
 
 
         <Redirect to="/nada" />
@@ -54,12 +55,21 @@ const Routes = () => {
   }
 
   return (
-    <Router>
-      {isLogged && <MainNavigation />}
-      <main>
-        {routes}
-      </main>
-    </Router>
+    <AuthContext.Provider
+      value={{
+        login: login,
+        logout: logout,
+        userId: userId,
+        token: token,
+        admin: admin
+      }}>
+      <Router>
+        {token && <MainNavigation />}
+        <main>
+          {routes}
+        </main>
+      </Router>
+    </AuthContext.Provider>
   )
 }
 
