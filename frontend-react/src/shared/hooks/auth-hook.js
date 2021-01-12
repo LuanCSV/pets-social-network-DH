@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 
 export const useAuth = () => {
@@ -28,6 +28,14 @@ export const useAuth = () => {
 
         localStorage.removeItem('userData');
     }, []);
+
+    useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem('userData'));
+
+        if (storedData && storedData.token) {
+            login(storedData.userId, storedData.token, storedData.admin);
+        }
+    }, [login]);
 
     return { token, login, logout, userId, admin }
 }

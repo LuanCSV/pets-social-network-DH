@@ -20,7 +20,7 @@ function SideNav(props) {
                 <Logo bold size="25" padding="20" />
 
 
-                <NavLinks mobile admin={true} />
+                <NavLinks mobile admin={props.admin} />
 
                 <button onClick={props.logout} className="botaoClose Logout">Logout</button>
 

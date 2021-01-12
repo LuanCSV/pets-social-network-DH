@@ -17,7 +17,8 @@ function MainNavigation() {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const user = {
         userName: "Luan Carlos Silva Vasconcelos",
-        userPhoto: "https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png"
+        userPhoto: "https://digimedia.web.ua.pt/wp-content/uploads/2017/05/default-user-image.png",
+        userAdmin: auth.admin
     }
 
     useEffect(() => {
@@ -81,7 +82,8 @@ function MainNavigation() {
                     onClose={() => setSideMenuIsOpen(false)}
                     userName={user.userName}
                     userPhoto={user.userPhoto}
-                    logout={() =>  auth.logout()}
+                    admin={user.userAdmin}
+                    logout={() => auth.logout()}
                 />
 
             }
