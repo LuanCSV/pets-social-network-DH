@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../shared/context/AuthContext';
 import Input from '../../shared/FormElements/Input';
 
 import './FormLogin.css';
 
 const FormLogin = () => {
+
+    const auth = useContext(AuthContext);
 
     const inputsLogin = [
         {
@@ -23,6 +26,7 @@ const FormLogin = () => {
     ]
 
     const [formLoginState, setFormLoginState] = useState({});
+
 
     const loginInputHandler = (e) => {
         let lastInputLogin = formLoginState,
@@ -59,8 +63,10 @@ const FormLogin = () => {
                 }
             )
 
-            const responseData = await response.json()
-            alert(responseData.error || responseData.message)
+            const {message, admin, token, userId, error} = await response.json()
+            alert(message || error);
+            auth.login(userId, token, admin);
+
         } catch (error) {
             console.log(error);
         }

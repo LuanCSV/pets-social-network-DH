@@ -100,6 +100,7 @@ const UsersControllers = {
             message: "Logged in! - Acessou!",
             userId: authenticatedUser.id,
             email: authenticatedUser.email,
+            admin: authenticatedUser.admin,
             token: token
         });
 

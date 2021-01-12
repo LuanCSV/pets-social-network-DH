@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../shared/context/AuthContext';
 
 import Logo from '../../shared/Logo/Logo'
 
@@ -10,6 +11,7 @@ const getWidthWindow = () => window.innerWidth;
 
 function MainNavigation() {
 
+    const auth = useContext(AuthContext);
     const [windowWidth, setWindowWidth] = useState(getWidthWindow);
     const [sideMenuIsOpen, setSideMenuIsOpen] = useState(false);
     const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -79,7 +81,7 @@ function MainNavigation() {
                     onClose={() => setSideMenuIsOpen(false)}
                     userName={user.userName}
                     userPhoto={user.userPhoto}
-                    logout={() => console.log("Deslogado")}
+                    logout={() =>  auth.logout()}
                 />
 
             }
@@ -92,7 +94,7 @@ function MainNavigation() {
                     <hr />
                     <Logo bold size="17"></Logo>
                     <button
-                        onClick={() => console.log("Deslogado")}
+                        onClick={() => auth.logout()}
                         className="botaoClose Logout">Logout</button>
                 </div>
             }
