@@ -40,7 +40,7 @@ const UsersControllers = {
 
         // cria o usuario q vai ser salvo no banco de dados
         const createdUser = new User({
-            admin: true,
+            admin: false,
             name: name,
             email: email,
             password: password,

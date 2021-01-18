@@ -6,7 +6,10 @@ import Admin from './pages/admin/Admin';
 import AuthPage from './pages/auth/auth';
 import ProfilePage from './pages/profile/Profile';
 import WelcomePage from './pages/welcome/Welcome';
+
+// onde o context eh criado 
 import { AuthContext } from './shared/context/AuthContext';
+// onde os valores do context sao definidos
 import { useAuth } from './shared/hooks/auth-hook';
 
 const Routes = () => {
@@ -55,6 +58,7 @@ const Routes = () => {
   }
 
   return (
+    // atribue os valores/funcoes do auth-hook no context criado
     <AuthContext.Provider
       value={{
         login: login,

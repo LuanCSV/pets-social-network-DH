@@ -6,6 +6,9 @@ import './FormLogin.css';
 
 const FormLogin = () => {
 
+    // usa o context criado
+    // e as funcoes sao trazidas pelo auth-hook quando foi
+    // definida no authcontext.provider
     const auth = useContext(AuthContext);
 
     const inputsLogin = [
