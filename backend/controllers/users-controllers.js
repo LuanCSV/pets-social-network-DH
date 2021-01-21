@@ -75,10 +75,7 @@ const UsersControllers = {
     }
 
     // antes de usar o hash na senha
-    if (
-      (bcrypt.compare(req.body.password, authenticatedUser.password),
-      function (err, result) {} !== password)
-    ) {
+    if (authenticatedUser.password !== password) {
       return res.json({ error: "Senha incorreta" });
     }
 
