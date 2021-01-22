@@ -61,7 +61,7 @@ const UsersControllers = {
   },
   login: async (req, res, next) => {
     const { email, password } = req.body;
-
+    
     // procurando se usuario existe
     let authenticatedUser;
     try {
@@ -75,7 +75,7 @@ const UsersControllers = {
     }
 
     // antes de usar o hash na senha
-    if (authenticatedUser.password !== password) {
+    if (!await bcrypt.compare(password, authenticatedUser.password)) {
       return res.json({ error: "Senha incorreta" });
     }
 
