@@ -3,12 +3,13 @@ const mongoose = require('mongoose');
 require("dotenv").config();
 const app = express();
 
+
 // ### Configuracoes ###
 const port = process.env.PORT || 5000;
 const MONGO_URL = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mean-course.ocusw.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 const usersRoutes = require('./routes/users-routes');
-
+const petsRoutes = require('./routes/pet-routes')
 // ### MiddleWares ###
 // BodyParser do express
 app.use(express.json());
@@ -26,6 +27,7 @@ app.use((req, res, next) => {
 // ### Routes ###
 app.use('/users', usersRoutes);
 
+app.use('/pet', petsRoutes)
 
 // "middleware" de erro
  app.use((req, res, next) => {
