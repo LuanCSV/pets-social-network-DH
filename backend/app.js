@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // ### Routes ###
 app.use('/users', usersRoutes);
 
-app.use('/pet', petsRoutes)
+app.use('/pets', petsRoutes)
 
 // "middleware" de erro
  app.use((req, res, next) => {

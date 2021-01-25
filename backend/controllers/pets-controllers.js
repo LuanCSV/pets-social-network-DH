@@ -11,6 +11,7 @@ const PetsController = {
       birthday: Date.now(),
       pet_race: race,
       pet_type: type,
+      pet_image: "https://i.pinimg.com/originals/fe/37/00/fe3700aa2931903bf528e99b0abe09da.jpg"
     });
 
     let user;
@@ -18,7 +19,6 @@ const PetsController = {
       user = await User.findById(userId);
     } catch (error) {
       console.log(error);
-      return next(error);
     }
     if (!userId) {
       res.json({
@@ -39,7 +39,6 @@ const PetsController = {
       session.commitTransaction();
     } catch (error) {
       console.log(error);
-      return next(error);
     }
 
     res.json({ pet: createdPet });
